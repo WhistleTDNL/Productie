@@ -22,17 +22,7 @@ Partial Class Klanten
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.KlantenDataGridView = New System.Windows.Forms.DataGridView()
-        Me.KlantnrDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.KlantnaamDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.KlantlandDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.KlantadresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.KlantpcDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.KlantwoonplaatsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.KlantenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProductieLMDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProductieLMDataSet = New WindowsApplication1.ProductieLMDataSet()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TxtKlantenKlantNr = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -46,94 +36,29 @@ Partial Class Klanten
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.KnopKlantenLeegmaken = New System.Windows.Forms.Button()
         Me.KnopNieuweKlant = New System.Windows.Forms.Button()
         Me.KnopZoekKlant = New System.Windows.Forms.Button()
-        Me.KlantenTableAdapter = New WindowsApplication1.ProductieLMDataSetTableAdapters.KlantenTableAdapter()
         Me.KnopKlantenSluiten = New System.Windows.Forms.Button()
-        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KnopKlantenLeegmaken = New System.Windows.Forms.Button()
+        Me.KnopKlantenOnderhoud = New System.Windows.Forms.Button()
         CType(Me.KlantenDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KlantenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProductieLMDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProductieLMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'KlantenDataGridView
         '
         Me.KlantenDataGridView.AllowUserToAddRows = False
         Me.KlantenDataGridView.AllowUserToDeleteRows = False
-        Me.KlantenDataGridView.AutoGenerateColumns = False
+        Me.KlantenDataGridView.AllowUserToOrderColumns = True
         Me.KlantenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.KlantenDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.KlantnrDataGridViewTextBoxColumn, Me.KlantnaamDataGridViewTextBoxColumn, Me.KlantlandDataGridViewTextBoxColumn, Me.KlantadresDataGridViewTextBoxColumn, Me.KlantpcDataGridViewTextBoxColumn, Me.KlantwoonplaatsDataGridViewTextBoxColumn})
-        Me.KlantenDataGridView.DataSource = Me.KlantenBindingSource
-        Me.KlantenDataGridView.Location = New System.Drawing.Point(330, 12)
+        Me.KlantenDataGridView.Location = New System.Drawing.Point(22, 221)
         Me.KlantenDataGridView.Name = "KlantenDataGridView"
         Me.KlantenDataGridView.ReadOnly = True
-        Me.KlantenDataGridView.Size = New System.Drawing.Size(645, 435)
+        Me.KlantenDataGridView.Size = New System.Drawing.Size(893, 226)
         Me.KlantenDataGridView.TabIndex = 0
-        '
-        'KlantnrDataGridViewTextBoxColumn
-        '
-        Me.KlantnrDataGridViewTextBoxColumn.DataPropertyName = "klantnr"
-        Me.KlantnrDataGridViewTextBoxColumn.HeaderText = "klantnr"
-        Me.KlantnrDataGridViewTextBoxColumn.Name = "KlantnrDataGridViewTextBoxColumn"
-        Me.KlantnrDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'KlantnaamDataGridViewTextBoxColumn
-        '
-        Me.KlantnaamDataGridViewTextBoxColumn.DataPropertyName = "klantnaam"
-        Me.KlantnaamDataGridViewTextBoxColumn.HeaderText = "klantnaam"
-        Me.KlantnaamDataGridViewTextBoxColumn.Name = "KlantnaamDataGridViewTextBoxColumn"
-        Me.KlantnaamDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'KlantlandDataGridViewTextBoxColumn
-        '
-        Me.KlantlandDataGridViewTextBoxColumn.DataPropertyName = "klantland"
-        Me.KlantlandDataGridViewTextBoxColumn.HeaderText = "klantland"
-        Me.KlantlandDataGridViewTextBoxColumn.Name = "KlantlandDataGridViewTextBoxColumn"
-        Me.KlantlandDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'KlantadresDataGridViewTextBoxColumn
-        '
-        Me.KlantadresDataGridViewTextBoxColumn.DataPropertyName = "klantadres"
-        Me.KlantadresDataGridViewTextBoxColumn.HeaderText = "klantadres"
-        Me.KlantadresDataGridViewTextBoxColumn.Name = "KlantadresDataGridViewTextBoxColumn"
-        Me.KlantadresDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'KlantpcDataGridViewTextBoxColumn
-        '
-        Me.KlantpcDataGridViewTextBoxColumn.DataPropertyName = "klantpc"
-        Me.KlantpcDataGridViewTextBoxColumn.HeaderText = "klantpc"
-        Me.KlantpcDataGridViewTextBoxColumn.Name = "KlantpcDataGridViewTextBoxColumn"
-        Me.KlantpcDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'KlantwoonplaatsDataGridViewTextBoxColumn
-        '
-        Me.KlantwoonplaatsDataGridViewTextBoxColumn.DataPropertyName = "klantwoonplaats"
-        Me.KlantwoonplaatsDataGridViewTextBoxColumn.HeaderText = "klantwoonplaats"
-        Me.KlantwoonplaatsDataGridViewTextBoxColumn.Name = "KlantwoonplaatsDataGridViewTextBoxColumn"
-        Me.KlantwoonplaatsDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'KlantenBindingSource
-        '
-        Me.KlantenBindingSource.DataMember = "Klanten"
-        Me.KlantenBindingSource.DataSource = Me.ProductieLMDataSetBindingSource
-        '
-        'ProductieLMDataSetBindingSource
-        '
-        Me.ProductieLMDataSetBindingSource.DataSource = Me.ProductieLMDataSet
-        Me.ProductieLMDataSetBindingSource.Position = 0
-        '
-        'ProductieLMDataSet
-        '
-        Me.ProductieLMDataSet.DataSetName = "ProductieLMDataSet"
-        Me.ProductieLMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.KnopKlantenLeegmaken)
         Me.GroupBox1.Controls.Add(Me.TxtKlantenKlantNr)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.TxtKlantenKlantLand)
@@ -146,17 +71,14 @@ Partial Class Klanten
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.KnopNieuweKlant)
-        Me.GroupBox1.Controls.Add(Me.KnopZoekKlant)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(311, 199)
+        Me.GroupBox1.Size = New System.Drawing.Size(311, 176)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
         'TxtKlantenKlantNr
         '
-        Me.TxtKlantenKlantNr.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KlantenBindingSource, "klantnr", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
         Me.TxtKlantenKlantNr.Location = New System.Drawing.Point(73, 13)
         Me.TxtKlantenKlantNr.Name = "TxtKlantenKlantNr"
         Me.TxtKlantenKlantNr.Size = New System.Drawing.Size(232, 20)
@@ -173,7 +95,6 @@ Partial Class Klanten
         '
         'TxtKlantenKlantLand
         '
-        Me.TxtKlantenKlantLand.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KlantenBindingSource, "klantland", True))
         Me.TxtKlantenKlantLand.Location = New System.Drawing.Point(73, 144)
         Me.TxtKlantenKlantLand.Name = "TxtKlantenKlantLand"
         Me.TxtKlantenKlantLand.Size = New System.Drawing.Size(232, 20)
@@ -181,7 +102,6 @@ Partial Class Klanten
         '
         'TxtKlantenKlantPlaats
         '
-        Me.TxtKlantenKlantPlaats.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KlantenBindingSource, "klantwoonplaats", True))
         Me.TxtKlantenKlantPlaats.Location = New System.Drawing.Point(73, 118)
         Me.TxtKlantenKlantPlaats.Name = "TxtKlantenKlantPlaats"
         Me.TxtKlantenKlantPlaats.Size = New System.Drawing.Size(232, 20)
@@ -189,7 +109,6 @@ Partial Class Klanten
         '
         'TxtKlantenKlantPc
         '
-        Me.TxtKlantenKlantPc.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KlantenBindingSource, "klantpc", True))
         Me.TxtKlantenKlantPc.Location = New System.Drawing.Point(73, 92)
         Me.TxtKlantenKlantPc.Name = "TxtKlantenKlantPc"
         Me.TxtKlantenKlantPc.Size = New System.Drawing.Size(232, 20)
@@ -197,7 +116,6 @@ Partial Class Klanten
         '
         'TxtKlantenKlantAdres
         '
-        Me.TxtKlantenKlantAdres.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KlantenBindingSource, "klantadres", True))
         Me.TxtKlantenKlantAdres.Location = New System.Drawing.Point(73, 66)
         Me.TxtKlantenKlantAdres.Name = "TxtKlantenKlantAdres"
         Me.TxtKlantenKlantAdres.Size = New System.Drawing.Size(232, 20)
@@ -205,7 +123,6 @@ Partial Class Klanten
         '
         'TxtKlantenKlantNaam
         '
-        Me.TxtKlantenKlantNaam.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KlantenBindingSource, "klantnaam", True))
         Me.TxtKlantenKlantNaam.Location = New System.Drawing.Point(73, 39)
         Me.TxtKlantenKlantNaam.Name = "TxtKlantenKlantNaam"
         Me.TxtKlantenKlantNaam.Size = New System.Drawing.Size(232, 20)
@@ -256,9 +173,18 @@ Partial Class Klanten
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Naam"
         '
+        'KnopKlantenLeegmaken
+        '
+        Me.KnopKlantenLeegmaken.Location = New System.Drawing.Point(103, 192)
+        Me.KnopKlantenLeegmaken.Name = "KnopKlantenLeegmaken"
+        Me.KnopKlantenLeegmaken.Size = New System.Drawing.Size(75, 23)
+        Me.KnopKlantenLeegmaken.TabIndex = 14
+        Me.KnopKlantenLeegmaken.Text = "Leegmaken"
+        Me.KnopKlantenLeegmaken.UseVisualStyleBackColor = True
+        '
         'KnopNieuweKlant
         '
-        Me.KnopNieuweKlant.Location = New System.Drawing.Point(9, 170)
+        Me.KnopNieuweKlant.Location = New System.Drawing.Point(184, 192)
         Me.KnopNieuweKlant.Name = "KnopNieuweKlant"
         Me.KnopNieuweKlant.Size = New System.Drawing.Size(75, 23)
         Me.KnopNieuweKlant.TabIndex = 1
@@ -267,57 +193,51 @@ Partial Class Klanten
         '
         'KnopZoekKlant
         '
-        Me.KnopZoekKlant.Location = New System.Drawing.Point(230, 170)
+        Me.KnopZoekKlant.Location = New System.Drawing.Point(22, 192)
         Me.KnopZoekKlant.Name = "KnopZoekKlant"
         Me.KnopZoekKlant.Size = New System.Drawing.Size(75, 23)
         Me.KnopZoekKlant.TabIndex = 0
         Me.KnopZoekKlant.Text = "Zoeken"
         Me.KnopZoekKlant.UseVisualStyleBackColor = True
         '
-        'KlantenTableAdapter
-        '
-        Me.KlantenTableAdapter.ClearBeforeFill = True
-        '
         'KnopKlantenSluiten
         '
-        Me.KnopKlantenSluiten.Location = New System.Drawing.Point(243, 424)
+        Me.KnopKlantenSluiten.Location = New System.Drawing.Point(346, 192)
         Me.KnopKlantenSluiten.Name = "KnopKlantenSluiten"
         Me.KnopKlantenSluiten.Size = New System.Drawing.Size(75, 23)
         Me.KnopKlantenSluiten.TabIndex = 14
         Me.KnopKlantenSluiten.Text = "Sluiten"
         Me.KnopKlantenSluiten.UseVisualStyleBackColor = True
         '
-        'KnopKlantenLeegmaken
+        'KnopKlantenOnderhoud
         '
-        Me.KnopKlantenLeegmaken.Location = New System.Drawing.Point(126, 170)
-        Me.KnopKlantenLeegmaken.Name = "KnopKlantenLeegmaken"
-        Me.KnopKlantenLeegmaken.Size = New System.Drawing.Size(75, 23)
-        Me.KnopKlantenLeegmaken.TabIndex = 14
-        Me.KnopKlantenLeegmaken.Text = "Leegmaken"
-        Me.KnopKlantenLeegmaken.UseVisualStyleBackColor = True
+        Me.KnopKlantenOnderhoud.Location = New System.Drawing.Point(265, 192)
+        Me.KnopKlantenOnderhoud.Name = "KnopKlantenOnderhoud"
+        Me.KnopKlantenOnderhoud.Size = New System.Drawing.Size(75, 23)
+        Me.KnopKlantenOnderhoud.TabIndex = 15
+        Me.KnopKlantenOnderhoud.Text = "Onderhoud"
+        Me.KnopKlantenOnderhoud.UseVisualStyleBackColor = True
         '
         'Klanten
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(995, 467)
+        Me.ClientSize = New System.Drawing.Size(927, 467)
+        Me.Controls.Add(Me.KnopKlantenLeegmaken)
+        Me.Controls.Add(Me.KnopKlantenOnderhoud)
         Me.Controls.Add(Me.KnopKlantenSluiten)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.KlantenDataGridView)
+        Me.Controls.Add(Me.KnopZoekKlant)
+        Me.Controls.Add(Me.KnopNieuweKlant)
         Me.Name = "Klanten"
         Me.Text = "Klanten"
         CType(Me.KlantenDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KlantenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProductieLMDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProductieLMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents BindingSource1 As BindingSource
     Friend WithEvents KlantenDataGridView As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents KnopNieuweKlant As Button
@@ -332,18 +252,9 @@ Partial Class Klanten
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents ProductieLMDataSetBindingSource As BindingSource
-    Friend WithEvents ProductieLMDataSet As ProductieLMDataSet
-    Friend WithEvents KlantenBindingSource As BindingSource
-    Friend WithEvents KlantenTableAdapter As ProductieLMDataSetTableAdapters.KlantenTableAdapter
     Friend WithEvents TxtKlantenKlantNr As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents KlantnrDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents KlantnaamDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents KlantlandDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents KlantadresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents KlantpcDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents KlantwoonplaatsDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents KnopKlantenSluiten As Button
     Friend WithEvents KnopKlantenLeegmaken As Button
+    Friend WithEvents KnopKlantenOnderhoud As Button
 End Class

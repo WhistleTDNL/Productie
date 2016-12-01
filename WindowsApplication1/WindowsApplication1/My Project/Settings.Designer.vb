@@ -56,22 +56,70 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\Dev\Werk\ProductieLM.accdb")>  _
-        Public ReadOnly Property ProductieLMConnectionString() As String
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString)>  _
+        Public ReadOnly Property ConnectionString() As String
             Get
-                Return CType(Me("ProductieLMConnectionString"),String)
+                Return CType(Me("ConnectionString"),String)
             End Get
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\ProductieLM.accdb")>  _
-        Public ReadOnly Property ProductieLMConnectionString1() As String
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property DBType() As Integer
             Get
-                Return CType(Me("ProductieLMConnectionString1"),String)
+                Return CType(Me("DBType"),Integer)
             End Get
+            Set
+                Me("DBType") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property DBServer() As String
+            Get
+                Return CType(Me("DBServer"),String)
+            End Get
+            Set
+                Me("DBServer") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property DBDatabase() As String
+            Get
+                Return CType(Me("DBDatabase"),String)
+            End Get
+            Set
+                Me("DBDatabase") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property DBUser() As String
+            Get
+                Return CType(Me("DBUser"),String)
+            End Get
+            Set
+                Me("DBUser") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property DBPassword() As String
+            Get
+                Return CType(Me("DBPassword"),String)
+            End Get
+            Set
+                Me("DBPassword") = value
+            End Set
         End Property
     End Class
 End Namespace
@@ -84,9 +132,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.WindowsApplication1.My.MySettings
+        Friend ReadOnly Property Settings() As Global.SimProdPlan.My.MySettings
             Get
-                Return Global.WindowsApplication1.My.MySettings.Default
+                Return Global.SimProdPlan.My.MySettings.Default
             End Get
         End Property
     End Module

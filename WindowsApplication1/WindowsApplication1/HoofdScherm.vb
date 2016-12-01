@@ -1,4 +1,5 @@
 ﻿Public Class HoofdScherm
+
     Private Sub AfsluitenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AfsluitenToolStripMenuItem.Click
         Application.Exit()
     End Sub
@@ -27,6 +28,7 @@
         NwOrder.Show()
     End Sub
 
-
-
+    Private Sub OverToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OverToolStripMenuItem.Click
+        AboutBox1.Show()
+    End Sub
 End Class

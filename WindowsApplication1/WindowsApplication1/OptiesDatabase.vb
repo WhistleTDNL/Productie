@@ -1,15 +1,19 @@
 ﻿Public Class OptiesDatabase
     Private Sub KnopOpslaan_Click(sender As Object, e As EventArgs) Handles KnopOpslaan.Click
-        If DatabaseType = "MSSQL" Then
-            DatabaseServer = TxtDatabaseServer.Text
-            DatabaseProvider = TxtDatabaseProvider.Text
-            DatabaseCatalog = TxtDatabaseCatalog.Text
-            DatabaseDataSource = TxtDatabaseDataSource.Text
-            DatabaseIntegratedSecurity = CheckBoxIntegratedSecurity
-            DatabaseTrustedConnection = CheckBoxTrustedConnection
-        Else
-            DatabaseProvider = TxtDatabaseProvider2.Text
-            DatabaseDataSource = TxtDatabaseDataSource2.Text
+        My.Settings.DBType = DataBaseSetting.SelectedIndex
+        If DataBaseSetting.SelectedIndex = 0 Then
+            My.Settings.DBServer = MSAccessProvider.Text
+            My.Settings.DBDatabase = MSAccessDatasource.Text
+        ElseIf DataBaseSetting.SelectedIndex = 1 Then
+            My.Settings.DBServer = MSSQLServer.Text
+            My.Settings.DBDatabase = MSSQLDatabase.Text
+            My.Settings.DBUser = MSSQLUser.Text
+            My.Settings.DBPassword = MSSQLPassword.Text
+        ElseIf DataBaseSetting.SelectedIndex = 2 Then
+            My.Settings.DBServer = MySQLServer.Text
+            My.Settings.DBDatabase = MySQLServer.Text
+            My.Settings.DBUser = MySQLUser.Text
+            My.Settings.DBPassword = MySQLPassword.Text
         End If
     End Sub
 
@@ -18,61 +22,21 @@
     End Sub
 
     Private Sub OptiesDatabase_Load(sender As Object, e As EventArgs) Handles Me.Load
-        If DatabaseType = "ACCESS" Then
-            TxtDatabaseProvider2.Text = DatabaseProvider
-            TxtDatabaseDataSource2.Text = DatabaseDataSource
-            RadioknopMSSQL.Checked = False
-            RadioKnopAccess.Checked = True
-            TxtDatabaseServer.Enabled = False
-            TxtDatabaseProvider.Enabled = False
-            TxtDatabaseDataSource.Enabled = False
-            TxtDatabaseCatalog.Enabled = False
-            CheckBoxIntegratedSecurity.Enabled = False
-            CheckBoxTrustedConnection.Enabled = False
-        ElseIf DatabaseType = "MSSQL" Then
-            TxtDatabaseServer.Text = DatabaseServer
-            TxtDatabaseProvider.Text = DatabaseProvider
-            TxtDatabaseCatalog.Text = DatabaseCatalog
-            TxtDatabaseDataSource.Text = DatabaseDataSource
-            CheckBoxIntegratedSecurity = DatabaseIntegratedSecurity
-            CheckBoxTrustedConnection = DatabaseTrustedConnection
-            RadioknopMSSQL.Checked = True
-            RadioKnopAccess.Checked = False
-            TxtDatabaseDataSource2.Enabled = False
-            TxtDatabaseProvider2.Enabled = False
+        Dim SelTab As Integer = My.Settings.DBType
+        DataBaseSetting.SelectTab(SelTab)
+        If SelTab = 0 Then
+            MSAccessProvider.Text = My.Settings.DBServer
+            MSAccessDatasource.Text = My.Settings.DBDatabase
+        ElseIf SelTab = 1 Then
+            MSSQLServer.Text = My.Settings.DBServer
+            MSSQLDatabase.Text = My.Settings.DBDatabase
+            MSSQLUser.Text = My.Settings.DBUser
+            MSSQLPassword.Text = My.Settings.DBPassword
+        ElseIf SelTab = 2 Then
+            MySQLServer.Text = My.Settings.DBServer
+            MySQLServer.Text = My.Settings.DBDatabase
+            MySQLUser.Text = My.Settings.DBUser
+            MySQLPassword.Text = My.Settings.DBPassword
         End If
-    End Sub
-
-    Private Sub RadioKnopAccess_Click(sender As Object, e As EventArgs) Handles RadioKnopAccess.Click
-        TxtDatabaseServer.Enabled = False
-        TxtDatabaseProvider.Enabled = False
-        TxtDatabaseDataSource.Enabled = False
-        TxtDatabaseCatalog.Enabled = False
-        CheckBoxIntegratedSecurity.Enabled = False
-        CheckBoxTrustedConnection.Enabled = False
-        TxtDatabaseDataSource2.Enabled = True
-        TxtDatabaseProvider2.Enabled = True
-        RadioknopMSSQL.Checked = False
-        DatabaseType = "ACCESS"
-        DatabaseServer = ""
-        DatabaseProvider = ""
-        DatabaseDataSource = ""
-        DatabaseCatalog = ""
-        DatabaseIntegratedSecurity = False
-        DatabaseTrustedConnection = False
-        DatabaseType = ""
-    End Sub
-
-    Private Sub RadioknopMSSQL_Click(sender As Object, e As EventArgs) Handles RadioknopMSSQL.Click
-        TxtDatabaseServer.Enabled = True
-        TxtDatabaseProvider.Enabled = True
-        TxtDatabaseDataSource.Enabled = True
-        TxtDatabaseCatalog.Enabled = True
-        CheckBoxIntegratedSecurity.Enabled = True
-        CheckBoxTrustedConnection.Enabled = True
-        TxtDatabaseDataSource2.Enabled = False
-        TxtDatabaseProvider2.Enabled = False
-        RadioKnopAccess.Checked = False
-        DatabaseType = "MSSQL"
     End Sub
 End Class

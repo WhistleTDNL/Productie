@@ -1,4 +1,5 @@
 ﻿Public Class Klanten
+
     Dim ds As DataSet = New DataSet
     Dim da As OleDb.OleDbDataAdapter
     Dim tables As DataTableCollection = ds.Tables
@@ -19,7 +20,7 @@
     Private Sub NwKlant_Load(sender As Object, e As EventArgs) Handles Me.Load
         myConnection.ConnectionString = DBPath
         myConnection.Open()
-        da = New OleDb.OleDbDataAdapter("Select * from klanten", myConnection)
+        da = New OleDb.OleDbDataAdapter("Select * from Klanten", myConnection)
         da.Fill(ds, "Klanten")
         Dim view1 As New DataView(tables(0))
         source1.DataSource = view1
@@ -45,5 +46,24 @@
         TxtKlantenKlantPlaats.Text = ""
         TxtKlantenKlantLand.Text = ""
         Call KnopZoekKlant_Click(sender, e)
+    End Sub
+
+    Private Sub KnopKlantenOnderhoud_Click(sender As Object, e As EventArgs) Handles KnopKlantenOnderhoud.Click
+        Dim HuidigeRij As Integer = KlantenDataGridView.CurrentRow.Index
+        If IsNumeric(HuidigeRij) Then
+            Dim KlantId As String = KlantenDataGridView.Rows(HuidigeRij).Cells(0).Value.ToString
+            Dim KlantNaam As String = KlantenDataGridView.Rows(HuidigeRij).Cells(1).Value.ToString
+            Dim KlantAdres As String = KlantenDataGridView.Rows(HuidigeRij).Cells(2).Value.ToString
+            Dim KlantPc As String = KlantenDataGridView.Rows(HuidigeRij).Cells(3).Value.ToString
+            Dim KlantWoonplaats As String = KlantenDataGridView.Rows(HuidigeRij).Cells(4).Value.ToString
+            Dim KlantLand As String = KlantenDataGridView.Rows(HuidigeRij).Cells(5).Value.ToString
+            tempKlantArray(0) = KlantId
+            tempKlantArray(1) = KlantNaam
+            tempKlantArray(2) = KlantAdres
+            tempKlantArray(3) = KlantPc
+            tempKlantArray(4) = KlantWoonplaats
+            tempKlantArray(5) = KlantLand
+        End If
+        OndKlant.Show()
     End Sub
 End Class

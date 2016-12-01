@@ -35,8 +35,8 @@ Partial Class HoofdScherm
         Me.AfsluitenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RapportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OptiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DatabaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,14 +59,14 @@ Partial Class HoofdScherm
         'OrderToolStripMenuItem
         '
         Me.OrderToolStripMenuItem.Name = "OrderToolStripMenuItem"
-        Me.OrderToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OrderToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.OrderToolStripMenuItem.Text = "Order"
         '
         'RelatieToolStripMenuItem
         '
         Me.RelatieToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KlantToolStripMenuItem, Me.LeverancierToolStripMenuItem})
         Me.RelatieToolStripMenuItem.Name = "RelatieToolStripMenuItem"
-        Me.RelatieToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RelatieToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.RelatieToolStripMenuItem.Text = "Relatie"
         '
         'KlantToolStripMenuItem
@@ -85,7 +85,7 @@ Partial Class HoofdScherm
         '
         Me.ArtikelToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GrondstofToolStripMenuItem, Me.ArtikelToolStripMenuItem1})
         Me.ArtikelToolStripMenuItem.Name = "ArtikelToolStripMenuItem"
-        Me.ArtikelToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ArtikelToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.ArtikelToolStripMenuItem.Text = "Artikel"
         '
         'GrondstofToolStripMenuItem
@@ -103,12 +103,12 @@ Partial Class HoofdScherm
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(118, 6)
         '
         'AfsluitenToolStripMenuItem
         '
         Me.AfsluitenToolStripMenuItem.Name = "AfsluitenToolStripMenuItem"
-        Me.AfsluitenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AfsluitenToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.AfsluitenToolStripMenuItem.Text = "Afsluiten"
         '
         'RapportToolStripMenuItem
@@ -124,17 +124,17 @@ Partial Class HoofdScherm
         Me.OptiesToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
         Me.OptiesToolStripMenuItem.Text = "Opties"
         '
+        'DatabaseToolStripMenuItem
+        '
+        Me.DatabaseToolStripMenuItem.Name = "DatabaseToolStripMenuItem"
+        Me.DatabaseToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.DatabaseToolStripMenuItem.Text = "Database"
+        '
         'OverToolStripMenuItem
         '
         Me.OverToolStripMenuItem.Name = "OverToolStripMenuItem"
         Me.OverToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.OverToolStripMenuItem.Text = "Over"
-        '
-        'DatabaseToolStripMenuItem
-        '
-        Me.DatabaseToolStripMenuItem.Name = "DatabaseToolStripMenuItem"
-        Me.DatabaseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DatabaseToolStripMenuItem.Text = "Database"
         '
         'HoofdScherm
         '
@@ -144,7 +144,7 @@ Partial Class HoofdScherm
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "HoofdScherm"
-        Me.Text = "Form1"
+        Me.Text = "SimProdPlan"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
