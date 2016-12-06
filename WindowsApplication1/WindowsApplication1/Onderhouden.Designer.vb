@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class OndKlant
+Partial Class Onderhouden
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,13 +23,13 @@ Partial Class OndKlant
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TxtOndKlantNr = New System.Windows.Forms.TextBox()
+        Me.TxtOndNr = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TxtOndKlantLand = New System.Windows.Forms.TextBox()
-        Me.TxtOndKlantPlaats = New System.Windows.Forms.TextBox()
-        Me.TxtOndKlantPc = New System.Windows.Forms.TextBox()
-        Me.TxtOndKlantAdres = New System.Windows.Forms.TextBox()
-        Me.TxtOndKlantNaam = New System.Windows.Forms.TextBox()
+        Me.TxtOndLand = New System.Windows.Forms.TextBox()
+        Me.TxtOndPlaats = New System.Windows.Forms.TextBox()
+        Me.TxtOndPc = New System.Windows.Forms.TextBox()
+        Me.TxtOndAdres = New System.Windows.Forms.TextBox()
+        Me.TxtOndNaam = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -42,13 +42,13 @@ Partial Class OndKlant
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TxtOndKlantNr)
+        Me.GroupBox1.Controls.Add(Me.TxtOndNr)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.TxtOndKlantLand)
-        Me.GroupBox1.Controls.Add(Me.TxtOndKlantPlaats)
-        Me.GroupBox1.Controls.Add(Me.TxtOndKlantPc)
-        Me.GroupBox1.Controls.Add(Me.TxtOndKlantAdres)
-        Me.GroupBox1.Controls.Add(Me.TxtOndKlantNaam)
+        Me.GroupBox1.Controls.Add(Me.TxtOndLand)
+        Me.GroupBox1.Controls.Add(Me.TxtOndPlaats)
+        Me.GroupBox1.Controls.Add(Me.TxtOndPc)
+        Me.GroupBox1.Controls.Add(Me.TxtOndAdres)
+        Me.GroupBox1.Controls.Add(Me.TxtOndNaam)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -56,61 +56,61 @@ Partial Class OndKlant
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(311, 176)
+        Me.GroupBox1.Size = New System.Drawing.Size(355, 176)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
-        'TxtOndKlantNr
+        'TxtOndNr
         '
-        Me.TxtOndKlantNr.Enabled = False
-        Me.TxtOndKlantNr.Location = New System.Drawing.Point(73, 13)
-        Me.TxtOndKlantNr.Name = "TxtOndKlantNr"
-        Me.TxtOndKlantNr.Size = New System.Drawing.Size(232, 20)
-        Me.TxtOndKlantNr.TabIndex = 13
+        Me.TxtOndNr.Enabled = False
+        Me.TxtOndNr.Location = New System.Drawing.Point(117, 13)
+        Me.TxtOndNr.Name = "TxtOndNr"
+        Me.TxtOndNr.Size = New System.Drawing.Size(232, 20)
+        Me.TxtOndNr.TabIndex = 13
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(6, 16)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(68, 13)
+        Me.Label6.Size = New System.Drawing.Size(77, 13)
         Me.Label6.TabIndex = 12
-        Me.Label6.Text = "Klantnummer"
+        Me.Label6.Text = "Relatienummer"
         '
-        'TxtOndKlantLand
+        'TxtOndLand
         '
-        Me.TxtOndKlantLand.Location = New System.Drawing.Point(73, 144)
-        Me.TxtOndKlantLand.Name = "TxtOndKlantLand"
-        Me.TxtOndKlantLand.Size = New System.Drawing.Size(232, 20)
-        Me.TxtOndKlantLand.TabIndex = 11
+        Me.TxtOndLand.Location = New System.Drawing.Point(117, 144)
+        Me.TxtOndLand.Name = "TxtOndLand"
+        Me.TxtOndLand.Size = New System.Drawing.Size(232, 20)
+        Me.TxtOndLand.TabIndex = 11
         '
-        'TxtOndKlantPlaats
+        'TxtOndPlaats
         '
-        Me.TxtOndKlantPlaats.Location = New System.Drawing.Point(73, 118)
-        Me.TxtOndKlantPlaats.Name = "TxtOndKlantPlaats"
-        Me.TxtOndKlantPlaats.Size = New System.Drawing.Size(232, 20)
-        Me.TxtOndKlantPlaats.TabIndex = 10
+        Me.TxtOndPlaats.Location = New System.Drawing.Point(117, 118)
+        Me.TxtOndPlaats.Name = "TxtOndPlaats"
+        Me.TxtOndPlaats.Size = New System.Drawing.Size(232, 20)
+        Me.TxtOndPlaats.TabIndex = 10
         '
-        'TxtOndKlantPc
+        'TxtOndPc
         '
-        Me.TxtOndKlantPc.Location = New System.Drawing.Point(73, 92)
-        Me.TxtOndKlantPc.Name = "TxtOndKlantPc"
-        Me.TxtOndKlantPc.Size = New System.Drawing.Size(232, 20)
-        Me.TxtOndKlantPc.TabIndex = 9
+        Me.TxtOndPc.Location = New System.Drawing.Point(117, 92)
+        Me.TxtOndPc.Name = "TxtOndPc"
+        Me.TxtOndPc.Size = New System.Drawing.Size(232, 20)
+        Me.TxtOndPc.TabIndex = 9
         '
-        'TxtOndKlantAdres
+        'TxtOndAdres
         '
-        Me.TxtOndKlantAdres.Location = New System.Drawing.Point(73, 66)
-        Me.TxtOndKlantAdres.Name = "TxtOndKlantAdres"
-        Me.TxtOndKlantAdres.Size = New System.Drawing.Size(232, 20)
-        Me.TxtOndKlantAdres.TabIndex = 8
+        Me.TxtOndAdres.Location = New System.Drawing.Point(117, 66)
+        Me.TxtOndAdres.Name = "TxtOndAdres"
+        Me.TxtOndAdres.Size = New System.Drawing.Size(232, 20)
+        Me.TxtOndAdres.TabIndex = 8
         '
-        'TxtOndKlantNaam
+        'TxtOndNaam
         '
-        Me.TxtOndKlantNaam.Location = New System.Drawing.Point(73, 39)
-        Me.TxtOndKlantNaam.Name = "TxtOndKlantNaam"
-        Me.TxtOndKlantNaam.Size = New System.Drawing.Size(232, 20)
-        Me.TxtOndKlantNaam.TabIndex = 7
+        Me.TxtOndNaam.Location = New System.Drawing.Point(117, 39)
+        Me.TxtOndNaam.Name = "TxtOndNaam"
+        Me.TxtOndNaam.Size = New System.Drawing.Size(232, 20)
+        Me.TxtOndNaam.TabIndex = 7
         '
         'Label5
         '
@@ -168,23 +168,23 @@ Partial Class OndKlant
         '
         'KnopSluiten
         '
-        Me.KnopSluiten.Location = New System.Drawing.Point(242, 194)
+        Me.KnopSluiten.Location = New System.Drawing.Point(292, 194)
         Me.KnopSluiten.Name = "KnopSluiten"
         Me.KnopSluiten.Size = New System.Drawing.Size(75, 23)
         Me.KnopSluiten.TabIndex = 4
         Me.KnopSluiten.Text = "Sluiten"
         Me.KnopSluiten.UseVisualStyleBackColor = True
         '
-        'OndKlant
+        'Onderhouden
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(334, 235)
+        Me.ClientSize = New System.Drawing.Size(379, 223)
         Me.Controls.Add(Me.KnopSluiten)
         Me.Controls.Add(Me.KnopOpslaan)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "OndKlant"
-        Me.Text = "OndKlant"
+        Me.Name = "Onderhouden"
+        Me.Text = "Onderhouden"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -192,13 +192,13 @@ Partial Class OndKlant
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TxtOndKlantNr As TextBox
+    Friend WithEvents TxtOndNr As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TxtOndKlantLand As TextBox
-    Friend WithEvents TxtOndKlantPlaats As TextBox
-    Friend WithEvents TxtOndKlantPc As TextBox
-    Friend WithEvents TxtOndKlantAdres As TextBox
-    Friend WithEvents TxtOndKlantNaam As TextBox
+    Friend WithEvents TxtOndLand As TextBox
+    Friend WithEvents TxtOndPlaats As TextBox
+    Friend WithEvents TxtOndPc As TextBox
+    Friend WithEvents TxtOndAdres As TextBox
+    Friend WithEvents TxtOndNaam As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label

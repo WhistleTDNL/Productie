@@ -1,41 +1,41 @@
-﻿Public Class Klanten
+﻿Public Class UCKlanten
 
     Dim ds As DataSet = New DataSet
     Dim da As OleDb.OleDbDataAdapter
     Dim tables As DataTableCollection = ds.Tables
     Dim source1 As New BindingSource()
-
-    Private Sub KnopZoekKlant_Click(sender As Object, e As EventArgs) Handles KnopZoekKlant.Click
-        myConnection.Open()
-        If Not TxtKlantenKlantNr.Text = "" Then
-            source1.Filter = "klantnr = " & TxtKlantenKlantNr.Text
-            KlantenDataGridView.Refresh()
-        Else
-            source1.Filter = "klantnaam like '%" & TxtKlantenKlantNaam.Text & "%' and klantadres like '%" & TxtKlantenKlantAdres.Text & "%' and klantwoonplaats like '%" & TxtKlantenKlantPlaats.Text & "%' and klantland like '%" & TxtKlantenKlantLand.Text & "%' and klantpc like '%" & TxtKlantenKlantPc.Text & "%'"
-        End If
-        KlantenDataGridView.Refresh()
-        myConnection.Close()
-    End Sub
-
-    Private Sub NwKlant_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Function LoadData(query As String, tablenaam As String)
         myConnection.ConnectionString = DBPath
         myConnection.Open()
-        da = New OleDb.OleDbDataAdapter("Select * from Klanten", myConnection)
-        da.Fill(ds, "Klanten")
+        ds.Clear()
+        da = New OleDb.OleDbDataAdapter(query, myConnection)
+        da.Fill(ds, tablenaam)
         Dim view1 As New DataView(tables(0))
         source1.DataSource = view1
         KlantenDataGridView.DataSource = view1
         KlantenDataGridView.Refresh()
         myConnection.Close()
+    End Function
+
+    Private Sub KnopZoekKlant_Click(sender As Object, e As EventArgs) Handles KnopZoekKlant.Click
+        myConnection.ConnectionString = DBPath
+        myConnection.Open()
+        If Not TxtKlantenKlantNr.Text = "" Then
+            source1.Filter = "klantnr = " & TxtKlantenKlantNr.Text
+        Else
+            source1.Filter = "klantnaam like '%" & TxtKlantenKlantNaam.Text & "%' and klantadres like '%" & TxtKlantenKlantAdres.Text & "%' and klantwoonplaats like '%" & TxtKlantenKlantPlaats.Text & "%' and klantland like '%" & TxtKlantenKlantLand.Text & "%' and klantpc like '%" & TxtKlantenKlantPc.Text & "%'"
+        End If
+        KlantenDataGridView.Refresh()
+        myConnection.Close()
+        Call LoadData("Select * from Klanten", "Klanten")
+    End Sub
+
+    Private Sub NwKlant_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Call LoadData("Select * from Klanten", "Klanten")
     End Sub
 
     Private Sub KnopNieuweKlant_Click(sender As Object, e As EventArgs) Handles KnopNieuweKlant.Click
         NwKlant.Show()
-        Me.Close()
-    End Sub
-
-    Private Sub KnopKlantenSluiten_Click(sender As Object, e As EventArgs) Handles KnopKlantenSluiten.Click
-        Me.Close()
     End Sub
 
     Private Sub KnopKlantenLeegmaken_Click(sender As Object, e As EventArgs) Handles KnopKlantenLeegmaken.Click
@@ -57,13 +57,14 @@
             Dim KlantPc As String = KlantenDataGridView.Rows(HuidigeRij).Cells(3).Value.ToString
             Dim KlantWoonplaats As String = KlantenDataGridView.Rows(HuidigeRij).Cells(4).Value.ToString
             Dim KlantLand As String = KlantenDataGridView.Rows(HuidigeRij).Cells(5).Value.ToString
-            tempKlantArray(0) = KlantId
-            tempKlantArray(1) = KlantNaam
-            tempKlantArray(2) = KlantAdres
-            tempKlantArray(3) = KlantPc
-            tempKlantArray(4) = KlantWoonplaats
-            tempKlantArray(5) = KlantLand
+            tempOndArray(0) = KlantId
+            tempOndArray(1) = KlantNaam
+            tempOndArray(2) = KlantAdres
+            tempOndArray(3) = KlantPc
+            tempOndArray(4) = KlantWoonplaats
+            tempOndArray(5) = KlantLand
+            tempOndArray(6) = "k"
         End If
-        OndKlant.Show()
+        Onderhouden.Show()
     End Sub
 End Class

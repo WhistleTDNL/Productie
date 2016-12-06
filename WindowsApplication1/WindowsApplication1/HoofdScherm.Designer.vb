@@ -22,6 +22,14 @@ Partial Class HoofdScherm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim ListViewGroup1 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Relaties", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewGroup2 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Artikelen", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewGroup3 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Orders", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Klanten")
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Leveranciers")
+        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Artikelen")
+        Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Grondstoffen")
+        Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Order")
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.StartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -33,16 +41,21 @@ Partial Class HoofdScherm
         Me.ArtikelToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.AfsluitenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RapportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OptiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DatabaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.SimProdPlan = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartToolStripMenuItem, Me.RapportToolStripMenuItem, Me.OptiesToolStripMenuItem, Me.OverToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartToolStripMenuItem, Me.OptiesToolStripMenuItem, Me.OverToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1407, 24)
@@ -111,12 +124,6 @@ Partial Class HoofdScherm
         Me.AfsluitenToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.AfsluitenToolStripMenuItem.Text = "Afsluiten"
         '
-        'RapportToolStripMenuItem
-        '
-        Me.RapportToolStripMenuItem.Name = "RapportToolStripMenuItem"
-        Me.RapportToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.RapportToolStripMenuItem.Text = "Rapport"
-        '
         'OptiesToolStripMenuItem
         '
         Me.OptiesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatabaseToolStripMenuItem})
@@ -136,17 +143,69 @@ Partial Class HoofdScherm
         Me.OverToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.OverToolStripMenuItem.Text = "Over"
         '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 24)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.ListView1)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Size = New System.Drawing.Size(1407, 582)
+        Me.SplitContainer1.SplitterDistance = 110
+        Me.SplitContainer1.TabIndex = 1
+        '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.SimProdPlan})
+        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
+        ListViewGroup1.Header = "Relaties"
+        ListViewGroup1.Name = "ListViewGroupRelaties"
+        ListViewGroup1.Tag = ""
+        ListViewGroup2.Header = "Artikelen"
+        ListViewGroup2.Name = "ListViewGroupArtikelen"
+        ListViewGroup3.Header = "Orders"
+        ListViewGroup3.Name = "ListViewGroupOrder"
+        Me.ListView1.Groups.AddRange(New System.Windows.Forms.ListViewGroup() {ListViewGroup1, ListViewGroup2, ListViewGroup3})
+        ListViewItem1.Group = ListViewGroup1
+        ListViewItem2.Group = ListViewGroup1
+        ListViewItem2.StateImageIndex = 0
+        ListViewItem3.Group = ListViewGroup2
+        ListViewItem4.Group = ListViewGroup2
+        ListViewItem5.Group = ListViewGroup3
+        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4, ListViewItem5})
+        Me.ListView1.Location = New System.Drawing.Point(0, 0)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(110, 582)
+        Me.ListView1.TabIndex = 0
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'SimProdPlan
+        '
+        Me.SimProdPlan.Tag = ""
+        Me.SimProdPlan.Text = "SimProdPlan"
+        Me.SimProdPlan.Width = 79
+        '
         'HoofdScherm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1407, 606)
+        Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "HoofdScherm"
         Me.Text = "SimProdPlan"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -163,8 +222,10 @@ Partial Class HoofdScherm
     Friend WithEvents ArtikelToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GrondstofToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ArtikelToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents RapportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OptiesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DatabaseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OverToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SplitContainer1 As SplitContainer
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents SimProdPlan As ColumnHeader
 End Class

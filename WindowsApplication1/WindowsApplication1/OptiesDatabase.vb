@@ -1,4 +1,7 @@
 ﻿Public Class OptiesDatabase
+
+
+
     Private Sub KnopOpslaan_Click(sender As Object, e As EventArgs) Handles KnopOpslaan.Click
         My.Settings.DBType = DataBaseSetting.SelectedIndex
         If DataBaseSetting.SelectedIndex = 0 Then
@@ -9,13 +12,33 @@
             My.Settings.DBDatabase = MSSQLDatabase.Text
             My.Settings.DBUser = MSSQLUser.Text
             My.Settings.DBPassword = MSSQLPassword.Text
-        ElseIf DataBaseSetting.SelectedIndex = 2 Then
-            My.Settings.DBServer = MySQLServer.Text
-            My.Settings.DBDatabase = MySQLServer.Text
-            My.Settings.DBUser = MySQLUser.Text
-            My.Settings.DBPassword = MySQLPassword.Text
+        End If
+
+        Dim DatabaseServer As String = My.Settings.DBServer
+        Dim DatabaseDatabase As String = My.Settings.DBDatabase
+        Dim DatabaseUser As String = My.Settings.DBUser
+        Dim DatabasePassword As String = My.Settings.DBPassword
+        Dim DatabaseType As Integer = My.Settings.DBType
+        If DatabaseType = 0 Then
+            DBPath = "Provider=" & DatabaseServer & ";Data Source =" & DatabaseDatabase
+        ElseIf databasetype = 1 Then
+            DBPath = "Provider=SQLOLEDB; Server=" & DatabaseServer & ";Database=" & DatabaseDatabase & "; uid=" & DatabaseUser & "; pwd=" & DatabasePassword & ";"
         End If
     End Sub
+
+
+
+    Function TestConn() As Boolean
+        Try
+            myConnection.ConnectionString = DBPath
+            myConnection.Open()
+            myConnection.Close()
+            Return True
+        Catch ex As Exception
+            MsgBox("Cannot connect to database")
+            Return False
+        End Try
+    End Function
 
     Private Sub KnopSluiten_Click(sender As Object, e As EventArgs) Handles KnopSluiten.Click
         Me.Close()
@@ -34,9 +57,19 @@
             MSSQLPassword.Text = My.Settings.DBPassword
         ElseIf SelTab = 2 Then
             MySQLServer.Text = My.Settings.DBServer
-            MySQLServer.Text = My.Settings.DBDatabase
+            MySQLDatabase.Text = My.Settings.DBDatabase
             MySQLUser.Text = My.Settings.DBUser
             MySQLPassword.Text = My.Settings.DBPassword
+        End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim testmyConn As Boolean
+        testmyConn = TestConn()
+        If testmyConn Then
+            MsgBox("Connection Succeeded")
+        Else
+            MsgBox("Connection failed")
         End If
     End Sub
 End Class

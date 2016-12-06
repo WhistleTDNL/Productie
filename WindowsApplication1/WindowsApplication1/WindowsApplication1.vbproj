@@ -13,6 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -82,12 +82,15 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
+    <Import Include="System.Data.Odbc" />
+    <Import Include="System.Data.OleDb" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
     <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
+    <Import Include="VFPOLEDBLib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutBox1.Designer.vb">
@@ -110,7 +113,7 @@
       <DependentUpon>HoofdScherm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module1.vb" />
+    <Compile Include="TempArrays.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -138,16 +141,10 @@
     <Compile Include="GrondStof.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Klanten.Designer.vb">
-      <DependentUpon>Klanten.vb</DependentUpon>
+    <Compile Include="NWLev.Designer.vb">
+      <DependentUpon>NWLev.vb</DependentUpon>
     </Compile>
-    <Compile Include="Klanten.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lev.Designer.vb">
-      <DependentUpon>Lev.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Lev.vb">
+    <Compile Include="NWLev.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NwOrder.Designer.vb">
@@ -156,10 +153,10 @@
     <Compile Include="NwOrder.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OndKlant.Designer.vb">
-      <DependentUpon>OndKlant.vb</DependentUpon>
+    <Compile Include="Onderhouden.Designer.vb">
+      <DependentUpon>Onderhouden.vb</DependentUpon>
     </Compile>
-    <Compile Include="OndKlant.vb">
+    <Compile Include="Onderhouden.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OptiesDatabase.Designer.vb">
@@ -169,6 +166,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings.vb" />
+    <Compile Include="UCKlanten.Designer.vb">
+      <DependentUpon>UCKlanten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCKlanten.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLev.Designer.vb">
+      <DependentUpon>UCLev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCLev.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControl1.Designer.vb">
       <DependentUpon>UserControl1.vb</DependentUpon>
     </Compile>
@@ -189,20 +198,26 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Klanten.resx">
-      <DependentUpon>Klanten.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="NwKlant.resx">
       <DependentUpon>NwKlant.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NWLev.resx">
+      <DependentUpon>NWLev.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NwOrder.resx">
       <DependentUpon>NwOrder.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OndKlant.resx">
-      <DependentUpon>OndKlant.vb</DependentUpon>
+    <EmbeddedResource Include="Onderhouden.resx">
+      <DependentUpon>Onderhouden.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptiesDatabase.resx">
       <DependentUpon>OptiesDatabase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCKlanten.resx">
+      <DependentUpon>UCKlanten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLev.resx">
+      <DependentUpon>UCLev.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.vb</DependentUpon>
@@ -232,6 +247,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

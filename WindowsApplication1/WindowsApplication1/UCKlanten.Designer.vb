@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Klanten
-    Inherits System.Windows.Forms.Form
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class UCKlanten
+    Inherits System.Windows.Forms.UserControl
 
-    'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    'UserControl overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,10 @@ Partial Class Klanten
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.KlantenDataGridView = New System.Windows.Forms.DataGridView()
+        Me.KnopKlantenLeegmaken = New System.Windows.Forms.Button()
+        Me.KnopKlantenOnderhoud = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TxtKlantenKlantNr = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -36,26 +37,30 @@ Partial Class Klanten
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.KnopKlantenLeegmaken = New System.Windows.Forms.Button()
-        Me.KnopNieuweKlant = New System.Windows.Forms.Button()
+        Me.KlantenDataGridView = New System.Windows.Forms.DataGridView()
         Me.KnopZoekKlant = New System.Windows.Forms.Button()
-        Me.KnopKlantenSluiten = New System.Windows.Forms.Button()
-        Me.KnopKlantenOnderhoud = New System.Windows.Forms.Button()
-        CType(Me.KlantenDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.KnopNieuweKlant = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.KlantenDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'KlantenDataGridView
+        'KnopKlantenLeegmaken
         '
-        Me.KlantenDataGridView.AllowUserToAddRows = False
-        Me.KlantenDataGridView.AllowUserToDeleteRows = False
-        Me.KlantenDataGridView.AllowUserToOrderColumns = True
-        Me.KlantenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.KlantenDataGridView.Location = New System.Drawing.Point(22, 221)
-        Me.KlantenDataGridView.Name = "KlantenDataGridView"
-        Me.KlantenDataGridView.ReadOnly = True
-        Me.KlantenDataGridView.Size = New System.Drawing.Size(893, 226)
-        Me.KlantenDataGridView.TabIndex = 0
+        Me.KnopKlantenLeegmaken.Location = New System.Drawing.Point(93, 183)
+        Me.KnopKlantenLeegmaken.Name = "KnopKlantenLeegmaken"
+        Me.KnopKlantenLeegmaken.Size = New System.Drawing.Size(75, 23)
+        Me.KnopKlantenLeegmaken.TabIndex = 20
+        Me.KnopKlantenLeegmaken.Text = "Leegmaken"
+        Me.KnopKlantenLeegmaken.UseVisualStyleBackColor = True
+        '
+        'KnopKlantenOnderhoud
+        '
+        Me.KnopKlantenOnderhoud.Location = New System.Drawing.Point(255, 183)
+        Me.KnopKlantenOnderhoud.Name = "KnopKlantenOnderhoud"
+        Me.KnopKlantenOnderhoud.Size = New System.Drawing.Size(75, 23)
+        Me.KnopKlantenOnderhoud.TabIndex = 22
+        Me.KnopKlantenOnderhoud.Text = "Onderhoud"
+        Me.KnopKlantenOnderhoud.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -71,17 +76,17 @@ Partial Class Klanten
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(311, 176)
-        Me.GroupBox1.TabIndex = 1
+        Me.GroupBox1.Size = New System.Drawing.Size(327, 176)
+        Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
         '
         'TxtKlantenKlantNr
         '
-        Me.TxtKlantenKlantNr.Location = New System.Drawing.Point(73, 13)
+        Me.TxtKlantenKlantNr.Location = New System.Drawing.Point(113, 13)
         Me.TxtKlantenKlantNr.Name = "TxtKlantenKlantNr"
-        Me.TxtKlantenKlantNr.Size = New System.Drawing.Size(232, 20)
+        Me.TxtKlantenKlantNr.Size = New System.Drawing.Size(208, 20)
         Me.TxtKlantenKlantNr.TabIndex = 13
         '
         'Label6
@@ -95,37 +100,37 @@ Partial Class Klanten
         '
         'TxtKlantenKlantLand
         '
-        Me.TxtKlantenKlantLand.Location = New System.Drawing.Point(73, 144)
+        Me.TxtKlantenKlantLand.Location = New System.Drawing.Point(113, 144)
         Me.TxtKlantenKlantLand.Name = "TxtKlantenKlantLand"
-        Me.TxtKlantenKlantLand.Size = New System.Drawing.Size(232, 20)
+        Me.TxtKlantenKlantLand.Size = New System.Drawing.Size(208, 20)
         Me.TxtKlantenKlantLand.TabIndex = 11
         '
         'TxtKlantenKlantPlaats
         '
-        Me.TxtKlantenKlantPlaats.Location = New System.Drawing.Point(73, 118)
+        Me.TxtKlantenKlantPlaats.Location = New System.Drawing.Point(113, 118)
         Me.TxtKlantenKlantPlaats.Name = "TxtKlantenKlantPlaats"
-        Me.TxtKlantenKlantPlaats.Size = New System.Drawing.Size(232, 20)
+        Me.TxtKlantenKlantPlaats.Size = New System.Drawing.Size(208, 20)
         Me.TxtKlantenKlantPlaats.TabIndex = 10
         '
         'TxtKlantenKlantPc
         '
-        Me.TxtKlantenKlantPc.Location = New System.Drawing.Point(73, 92)
+        Me.TxtKlantenKlantPc.Location = New System.Drawing.Point(113, 92)
         Me.TxtKlantenKlantPc.Name = "TxtKlantenKlantPc"
-        Me.TxtKlantenKlantPc.Size = New System.Drawing.Size(232, 20)
+        Me.TxtKlantenKlantPc.Size = New System.Drawing.Size(208, 20)
         Me.TxtKlantenKlantPc.TabIndex = 9
         '
         'TxtKlantenKlantAdres
         '
-        Me.TxtKlantenKlantAdres.Location = New System.Drawing.Point(73, 66)
+        Me.TxtKlantenKlantAdres.Location = New System.Drawing.Point(113, 66)
         Me.TxtKlantenKlantAdres.Name = "TxtKlantenKlantAdres"
-        Me.TxtKlantenKlantAdres.Size = New System.Drawing.Size(232, 20)
+        Me.TxtKlantenKlantAdres.Size = New System.Drawing.Size(208, 20)
         Me.TxtKlantenKlantAdres.TabIndex = 8
         '
         'TxtKlantenKlantNaam
         '
-        Me.TxtKlantenKlantNaam.Location = New System.Drawing.Point(73, 39)
+        Me.TxtKlantenKlantNaam.Location = New System.Drawing.Point(113, 39)
         Me.TxtKlantenKlantNaam.Name = "TxtKlantenKlantNaam"
-        Me.TxtKlantenKlantNaam.Size = New System.Drawing.Size(232, 20)
+        Me.TxtKlantenKlantNaam.Size = New System.Drawing.Size(208, 20)
         Me.TxtKlantenKlantNaam.TabIndex = 7
         '
         'Label5
@@ -173,75 +178,59 @@ Partial Class Klanten
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Naam"
         '
-        'KnopKlantenLeegmaken
+        'KlantenDataGridView
         '
-        Me.KnopKlantenLeegmaken.Location = New System.Drawing.Point(103, 192)
-        Me.KnopKlantenLeegmaken.Name = "KnopKlantenLeegmaken"
-        Me.KnopKlantenLeegmaken.Size = New System.Drawing.Size(75, 23)
-        Me.KnopKlantenLeegmaken.TabIndex = 14
-        Me.KnopKlantenLeegmaken.Text = "Leegmaken"
-        Me.KnopKlantenLeegmaken.UseVisualStyleBackColor = True
-        '
-        'KnopNieuweKlant
-        '
-        Me.KnopNieuweKlant.Location = New System.Drawing.Point(184, 192)
-        Me.KnopNieuweKlant.Name = "KnopNieuweKlant"
-        Me.KnopNieuweKlant.Size = New System.Drawing.Size(75, 23)
-        Me.KnopNieuweKlant.TabIndex = 1
-        Me.KnopNieuweKlant.Text = "Nieuw"
-        Me.KnopNieuweKlant.UseVisualStyleBackColor = True
+        Me.KlantenDataGridView.AllowUserToAddRows = False
+        Me.KlantenDataGridView.AllowUserToDeleteRows = False
+        Me.KlantenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.KlantenDataGridView.Location = New System.Drawing.Point(12, 212)
+        Me.KlantenDataGridView.Name = "KlantenDataGridView"
+        Me.KlantenDataGridView.ReadOnly = True
+        Me.KlantenDataGridView.Size = New System.Drawing.Size(893, 226)
+        Me.KlantenDataGridView.TabIndex = 16
         '
         'KnopZoekKlant
         '
-        Me.KnopZoekKlant.Location = New System.Drawing.Point(22, 192)
+        Me.KnopZoekKlant.Location = New System.Drawing.Point(12, 183)
         Me.KnopZoekKlant.Name = "KnopZoekKlant"
         Me.KnopZoekKlant.Size = New System.Drawing.Size(75, 23)
-        Me.KnopZoekKlant.TabIndex = 0
+        Me.KnopZoekKlant.TabIndex = 17
         Me.KnopZoekKlant.Text = "Zoeken"
         Me.KnopZoekKlant.UseVisualStyleBackColor = True
         '
-        'KnopKlantenSluiten
+        'KnopNieuweKlant
         '
-        Me.KnopKlantenSluiten.Location = New System.Drawing.Point(346, 192)
-        Me.KnopKlantenSluiten.Name = "KnopKlantenSluiten"
-        Me.KnopKlantenSluiten.Size = New System.Drawing.Size(75, 23)
-        Me.KnopKlantenSluiten.TabIndex = 14
-        Me.KnopKlantenSluiten.Text = "Sluiten"
-        Me.KnopKlantenSluiten.UseVisualStyleBackColor = True
+        Me.KnopNieuweKlant.Location = New System.Drawing.Point(174, 183)
+        Me.KnopNieuweKlant.Name = "KnopNieuweKlant"
+        Me.KnopNieuweKlant.Size = New System.Drawing.Size(75, 23)
+        Me.KnopNieuweKlant.TabIndex = 19
+        Me.KnopNieuweKlant.Text = "Nieuw"
+        Me.KnopNieuweKlant.UseVisualStyleBackColor = True
         '
-        'KnopKlantenOnderhoud
-        '
-        Me.KnopKlantenOnderhoud.Location = New System.Drawing.Point(265, 192)
-        Me.KnopKlantenOnderhoud.Name = "KnopKlantenOnderhoud"
-        Me.KnopKlantenOnderhoud.Size = New System.Drawing.Size(75, 23)
-        Me.KnopKlantenOnderhoud.TabIndex = 15
-        Me.KnopKlantenOnderhoud.Text = "Onderhoud"
-        Me.KnopKlantenOnderhoud.UseVisualStyleBackColor = True
-        '
-        'Klanten
+        'UCKlanten
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(927, 467)
         Me.Controls.Add(Me.KnopKlantenLeegmaken)
         Me.Controls.Add(Me.KnopKlantenOnderhoud)
-        Me.Controls.Add(Me.KnopKlantenSluiten)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.KlantenDataGridView)
         Me.Controls.Add(Me.KnopZoekKlant)
         Me.Controls.Add(Me.KnopNieuweKlant)
-        Me.Name = "Klanten"
-        Me.Text = "Klanten"
-        CType(Me.KlantenDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Name = "UCKlanten"
+        Me.Size = New System.Drawing.Size(909, 441)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.KlantenDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents KlantenDataGridView As DataGridView
+
+    Friend WithEvents KnopKlantenLeegmaken As Button
+    Friend WithEvents KnopKlantenOnderhoud As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents KnopNieuweKlant As Button
-    Friend WithEvents KnopZoekKlant As Button
+    Friend WithEvents TxtKlantenKlantNr As TextBox
+    Friend WithEvents Label6 As Label
     Friend WithEvents TxtKlantenKlantLand As TextBox
     Friend WithEvents TxtKlantenKlantPlaats As TextBox
     Friend WithEvents TxtKlantenKlantPc As TextBox
@@ -252,9 +241,7 @@ Partial Class Klanten
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TxtKlantenKlantNr As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents KnopKlantenSluiten As Button
-    Friend WithEvents KnopKlantenLeegmaken As Button
-    Friend WithEvents KnopKlantenOnderhoud As Button
+    Friend WithEvents KlantenDataGridView As DataGridView
+    Friend WithEvents KnopZoekKlant As Button
+    Friend WithEvents KnopNieuweKlant As Button
 End Class

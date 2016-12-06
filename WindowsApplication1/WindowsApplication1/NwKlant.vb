@@ -38,16 +38,10 @@
         End Using
 
         Me.Close()
-        Klanten.Show()
     End Sub
 
     Private Sub KnopNwKlantSluiten_Click(sender As Object, e As EventArgs) Handles KnopNwKlantSluiten.Click
         Me.Close()
-        Klanten.Show()
     End Sub
-
-
-
-
 
 End Class

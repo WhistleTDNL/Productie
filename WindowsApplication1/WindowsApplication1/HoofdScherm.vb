@@ -16,14 +16,6 @@
         GrondStof.Show()
     End Sub
 
-    Private Sub KlantToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KlantToolStripMenuItem.Click
-        Klanten.Show()
-    End Sub
-
-    Private Sub LeverancierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LeverancierToolStripMenuItem.Click
-        Lev.Show()
-    End Sub
-
     Private Sub OrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderToolStripMenuItem.Click
         NwOrder.Show()
     End Sub
@@ -31,4 +23,24 @@
     Private Sub OverToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OverToolStripMenuItem.Click
         AboutBox1.Show()
     End Sub
+
+    Dim UCLev As New UCLev
+    Dim UCKlanten As New UCKlanten
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+        Dim LVIndex As Integer = ListView1.FocusedItem.Index
+        If LVIndex = 0 Then
+            SplitContainer1.Panel2.Controls.Clear()
+            UCKlanten.Dock = DockStyle.Fill
+            SplitContainer1.Panel2.Controls.Add(UCKlanten)
+        ElseIf LVIndex = 1 Then
+            SplitContainer1.Panel2.Controls.Clear()
+            UCLev.Dock = DockStyle.Fill
+            SplitContainer1.Panel2.Controls.Add(UCLev)
+        ElseIf LVIndex = 2 Then
+            SplitContainer1.Panel2.Controls.Clear()
+            UCLev.Dock = DockStyle.Fill
+            SplitContainer1.Panel2.Controls.Add(UCLev)
+        End If
+    End Sub
+
 End Class
