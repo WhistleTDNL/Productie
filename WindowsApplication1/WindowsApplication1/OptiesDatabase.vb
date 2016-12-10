@@ -10,6 +10,7 @@
         ElseIf DataBaseSetting.SelectedIndex = 1 Then
             My.Settings.DBServer = MSSQLServer.Text
             My.Settings.DBDatabase = MSSQLDatabase.Text
+            My.Settings.DBSSLI =
             My.Settings.DBUser = MSSQLUser.Text
             My.Settings.DBPassword = MSSQLPassword.Text
         End If
@@ -22,7 +23,7 @@
         If DatabaseType = 0 Then
             DBPath = "Provider=" & DatabaseServer & ";Data Source =" & DatabaseDatabase
         ElseIf databasetype = 1 Then
-            DBPath = "Provider=SQLOLEDB; Server=" & DatabaseServer & ";Database=" & DatabaseDatabase & "; uid=" & DatabaseUser & "; pwd=" & DatabasePassword & ";"
+            DBPath = "Provider=SQLOLEDB; Server=" & DatabaseServer & ";Database=" & DatabaseDatabase & "; Integrated Security=SSPI;"
         End If
     End Sub
 
@@ -55,11 +56,6 @@
             MSSQLDatabase.Text = My.Settings.DBDatabase
             MSSQLUser.Text = My.Settings.DBUser
             MSSQLPassword.Text = My.Settings.DBPassword
-        ElseIf SelTab = 2 Then
-            MySQLServer.Text = My.Settings.DBServer
-            MySQLDatabase.Text = My.Settings.DBDatabase
-            MySQLUser.Text = My.Settings.DBUser
-            MySQLPassword.Text = My.Settings.DBPassword
         End If
     End Sub
 

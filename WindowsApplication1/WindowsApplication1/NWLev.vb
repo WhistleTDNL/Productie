@@ -22,7 +22,7 @@
         Dim NwLevPC As String = TxtNwLevPc.Text
         Dim NwLevPlaats As String = TxtNwLevPlaats.Text
         Dim NwLevLand As String = TxtNwLevLand.Text
-        Dim sql As String = "INSERT INTO Leveranciers (levnaam, levadres, levpc, levwoonplaats, levland) VALUES (@NwLevnaam, @NwLevadres, @NwLevpc, @NwLevplaats, @NwLevland)"
+        Dim sql As String = "INSERT INTO Lev (levnaam, levadres, levpc, levwoon, levlandid) VALUES (@NwLevnaam, @NwLevadres, @NwLevpc, @NwLevplaats, @NwLevland)"
 
         Using myConnection
             Using sqlcom = New System.Data.OleDb.OleDbCommand(sql, myConnection)
@@ -33,7 +33,7 @@
                 sqlcom.Parameters.Add("@NwLevplaats", OleDb.OleDbType.VarChar).Value = NwLevPlaats
                 sqlcom.Parameters.Add("@NwLevland", OleDb.OleDbType.VarChar).Value = NwLevLand
                 Dim icount As Integer = sqlcom.ExecuteNonQuery()
-                MsgBox(icount & " Nieuwe klant aangemaakt")
+                MsgBox(icount & " Nieuwe leverancier aangemaakt")
             End Using
         End Using
 

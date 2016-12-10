@@ -23,15 +23,15 @@
         If Not TxtKlantenKlantNr.Text = "" Then
             source1.Filter = "klantnr = " & TxtKlantenKlantNr.Text
         Else
-            source1.Filter = "klantnaam like '%" & TxtKlantenKlantNaam.Text & "%' and klantadres like '%" & TxtKlantenKlantAdres.Text & "%' and klantwoonplaats like '%" & TxtKlantenKlantPlaats.Text & "%' and klantland like '%" & TxtKlantenKlantLand.Text & "%' and klantpc like '%" & TxtKlantenKlantPc.Text & "%'"
+            source1.Filter = "klantnaam like '%" & TxtKlantenKlantNaam.Text & "%' and klantadres like '%" & TxtKlantenKlantAdres.Text & "%' and klantwoon like '%" & TxtKlantenKlantPlaats.Text & "%' and klantlandid like '%" & TxtKlantenKlantLand.Text & "%' and klantpc like '%" & TxtKlantenKlantPc.Text & "%'"
         End If
         KlantenDataGridView.Refresh()
         myConnection.Close()
-        Call LoadData("Select * from Klanten", "Klanten")
+        Call LoadData("Select * from Klant", "Klant")
     End Sub
 
     Private Sub NwKlant_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Call LoadData("Select * from Klanten", "Klanten")
+        Call LoadData("Select * from Klant", "Klant")
     End Sub
 
     Private Sub KnopNieuweKlant_Click(sender As Object, e As EventArgs) Handles KnopNieuweKlant.Click

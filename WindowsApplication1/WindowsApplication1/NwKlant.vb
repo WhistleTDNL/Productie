@@ -22,7 +22,7 @@
         Dim NwKlantPC As String = TxtNwKlantPc.Text
         Dim NwKlantPlaats As String = TxtNwKlantPlaats.Text
         Dim NwKlantLand As String = TxtNwKlantLand.Text
-        Dim sql As String = "INSERT INTO klanten (klantnaam, klantadres,klantpc, klantwoonplaats, klantland) VALUES (@nwklantnaam, @nwklantadres, @nwklantpc, @nwklantplaats, @nwklantland)"
+        Dim sql As String = "INSERT INTO klant (klantnaam, klantadres,klantpc, klantwoon, klantlandid) VALUES (@nwklantnaam, @nwklantadres, @nwklantpc, @nwklantplaats, @nwklantland)"
 
         Using myConnection
             Using sqlcom = New System.Data.OleDb.OleDbCommand(sql, myConnection)

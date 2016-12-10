@@ -10,9 +10,9 @@
         Dim OndLand As String = TxtOndLand.Text
         Dim sql As String
         If relType = "k" Then
-            sql = "UPDATE klanten Set klantnaam = @nwnaam, klantadres = @nwadres, klantpc = @nwpc, klantwoonplaats = @nwplaats, klantland = @nwland WHERE klantnr = @nwnr"
+            sql = "UPDATE klant Set klantnaam = @nwnaam, klantadres = @nwadres, klantpc = @nwpc, klantwoon = @nwplaats, klantlandid = @nwland WHERE klantnr = @nwnr"
         ElseIf relType = "l" Then
-            sql = "UPDATE leveranciers Set levnaam = @nwnaam, levadres = @nwadres, levpc = @nwpc, levwoonplaats = @nwplaats, levland = @nwand WHERE levnr = @nwnr"
+            sql = "UPDATE lev Set levnaam = @nwnaam, levadres = @nwadres, levpc = @nwpc, levwoon = @nwplaats, levlandid = @nwand WHERE levnr = @nwnr"
         Else
             MsgBox("Onjuiste invoer")
         End If
