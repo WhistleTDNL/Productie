@@ -113,6 +113,18 @@
       <DependentUpon>HoofdScherm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Stamgegevens\NWStamgegevens.Designer.vb">
+      <DependentUpon>NWStamgegevens.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stamgegevens\NWStamgegevens.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stamgegevens\Stamgegevens.Designer.vb">
+      <DependentUpon>Stamgegevens.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stamgegevens\Stamgegevens.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="TempArrays.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -178,10 +190,10 @@
     <Compile Include="UCLev.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.vb">
-      <DependentUpon>UserControl1.vb</DependentUpon>
+    <Compile Include="Stamgegevens\UCStamgegevens.Designer.vb">
+      <DependentUpon>UCStamgegevens.vb</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.vb">
+    <Compile Include="Stamgegevens\UCStamgegevens.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
@@ -213,17 +225,24 @@
     <EmbeddedResource Include="OptiesDatabase.resx">
       <DependentUpon>OptiesDatabase.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Stamgegevens\NWStamgegevens.resx">
+      <DependentUpon>NWStamgegevens.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stamgegevens\Stamgegevens.resx">
+      <DependentUpon>Stamgegevens.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCKlanten.resx">
       <DependentUpon>UCKlanten.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCLev.resx">
       <DependentUpon>UCLev.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.vb</DependentUpon>
+    <EmbeddedResource Include="Stamgegevens\UCStamgegevens.resx">
+      <DependentUpon>UCStamgegevens.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

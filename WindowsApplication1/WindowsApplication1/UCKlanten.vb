@@ -5,7 +5,7 @@
     Dim tables As DataTableCollection = ds.Tables
     Dim source1 As New BindingSource()
     Private Function LoadData(query As String, tablenaam As String)
-        myConnection.ConnectionString = DBPath
+        myConnection.ConnectionString = My.Settings.DBPATH
         myConnection.Open()
         ds.Clear()
         da = New OleDb.OleDbDataAdapter(query, myConnection)

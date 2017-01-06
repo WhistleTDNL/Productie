@@ -35,6 +35,8 @@ C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication
 C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.OptiesDatabase.resources
 C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.UCKlanten.resources
 C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.UCLev.resources
-C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.UserControl1.resources
 C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
 C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.Onderhouden.resources
+C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.Stamgegevens.resources
+C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.UCStamgegevens.resources
+C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.NWStamgegevens.resources

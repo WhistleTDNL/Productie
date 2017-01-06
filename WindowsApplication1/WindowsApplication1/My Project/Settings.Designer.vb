@@ -121,6 +121,30 @@ Namespace My
                 Me("DBPassword") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property DBSSLI() As Boolean
+            Get
+                Return CType(Me("DBSSLI"),Boolean)
+            End Get
+            Set
+                Me("DBSSLI") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property DBPATH() As String
+            Get
+                Return CType(Me("DBPATH"),String)
+            End Get
+            Set
+                Me("DBPATH") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

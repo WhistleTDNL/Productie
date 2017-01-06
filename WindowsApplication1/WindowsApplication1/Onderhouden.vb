@@ -16,7 +16,7 @@
         Else
             MsgBox("Onjuiste invoer")
         End If
-        myConnection.ConnectionString = DBPath
+        myConnection.ConnectionString = My.Settings.DBPATH
         Using myConnection
             Using sqlcom = New System.Data.OleDb.OleDbCommand(sql, myConnection)
                 myConnection.Open()

@@ -22,22 +22,26 @@
         Dim NwKlantPC As String = TxtNwKlantPc.Text
         Dim NwKlantPlaats As String = TxtNwKlantPlaats.Text
         Dim NwKlantLand As String = TxtNwKlantLand.Text
-        Dim sql As String = "INSERT INTO klant (klantnaam, klantadres,klantpc, klantwoon, klantlandid) VALUES (@nwklantnaam, @nwklantadres, @nwklantpc, @nwklantplaats, @nwklantland)"
-
-        Using myConnection
-            Using sqlcom = New System.Data.OleDb.OleDbCommand(sql, myConnection)
-                myConnection.Open()
-                sqlcom.Parameters.Add("@nwklantnaam", OleDb.OleDbType.VarChar).Value = NwKlantNaam
-                sqlcom.Parameters.Add("@nwklantadres", OleDb.OleDbType.VarChar).Value = NwKlantAdres
-                sqlcom.Parameters.Add("@nwklantpc", OleDb.OleDbType.VarChar).Value = NwKlantPC
-                sqlcom.Parameters.Add("@nwklantplaats", OleDb.OleDbType.VarChar).Value = NwKlantPlaats
-                sqlcom.Parameters.Add("@nwklantland", OleDb.OleDbType.VarChar).Value = NwKlantLand
-                Dim icount As Integer = sqlcom.ExecuteNonQuery()
-                MsgBox(icount & " Nieuwe klant aangemaakt")
+        myConnection.ConnectionString = My.Settings.DBPATH
+        Dim sql As String = "INSERT INTO klant (klantnaam, klantadres,klantpc, klantwoon, klantlandid) VALUES (?, ?, ?, ?, ?)"
+        If NwKlantNaam = "" Or NwKlantAdres = "" Or NwKlantPC = "" Or NwKlantPlaats = "" Or NwKlantLand = "" Then
+            MsgBox("Een van de velden is leeg, klant niet opgeslagen.")
+        Else
+            Using myConnection
+                Using sqlcom = New System.Data.OleDb.OleDbCommand(sql, myConnection)
+                    myConnection.Open()
+                    sqlcom.Parameters.Add("@nwklantnaam", OleDb.OleDbType.VarChar).Value = NwKlantNaam
+                    sqlcom.Parameters.Add("@nwklantadres", OleDb.OleDbType.VarChar).Value = NwKlantAdres
+                    sqlcom.Parameters.Add("@nwklantpc", OleDb.OleDbType.VarChar).Value = NwKlantPC
+                    sqlcom.Parameters.Add("@nwklantplaats", OleDb.OleDbType.VarChar).Value = NwKlantPlaats
+                    sqlcom.Parameters.Add("@nwklantland", OleDb.OleDbType.VarChar).Value = NwKlantLand
+                    Dim icount As Integer = sqlcom.ExecuteNonQuery()
+                    MsgBox(icount & " Nieuwe klant aangemaakt")
+                End Using
             End Using
-        End Using
 
-        Me.Close()
+            Me.Close()
+        End If
     End Sub
 
     Private Sub KnopNwKlantSluiten_Click(sender As Object, e As EventArgs) Handles KnopNwKlantSluiten.Click

@@ -10,7 +10,7 @@
         ElseIf DataBaseSetting.SelectedIndex = 1 Then
             My.Settings.DBServer = MSSQLServer.Text
             My.Settings.DBDatabase = MSSQLDatabase.Text
-            My.Settings.DBSSLI =
+            My.Settings.DBSSLI = MSSQLSec.CheckState
             My.Settings.DBUser = MSSQLUser.Text
             My.Settings.DBPassword = MSSQLPassword.Text
         End If
@@ -21,9 +21,9 @@
         Dim DatabasePassword As String = My.Settings.DBPassword
         Dim DatabaseType As Integer = My.Settings.DBType
         If DatabaseType = 0 Then
-            DBPath = "Provider=" & DatabaseServer & ";Data Source =" & DatabaseDatabase
+            My.Settings.DBPATH = "Provider=" & DatabaseServer & ";Data Source =" & DatabaseDatabase
         ElseIf databasetype = 1 Then
-            DBPath = "Provider=SQLOLEDB; Server=" & DatabaseServer & ";Database=" & DatabaseDatabase & "; Integrated Security=SSPI;"
+            My.Settings.DBPATH = "Provider=SQLOLEDB; Server=" & DatabaseServer & ";Database=" & DatabaseDatabase & "; Integrated Security=SSPI;"
         End If
     End Sub
 
@@ -31,7 +31,7 @@
 
     Function TestConn() As Boolean
         Try
-            myConnection.ConnectionString = DBPath
+            myConnection.ConnectionString = My.Settings.DBPATH
             myConnection.Open()
             myConnection.Close()
             Return True
@@ -66,6 +66,16 @@
             MsgBox("Connection Succeeded")
         Else
             MsgBox("Connection failed")
+        End If
+    End Sub
+
+    Private Sub MSSQLSec_CheckedChanged(sender As Object, e As EventArgs) Handles MSSQLSec.CheckedChanged
+        If MSSQLSec.Checked = True Then
+            MSSQLUser.Enabled = False
+            MSSQLPassword.Enabled = False
+        ElseIf MSSQLSec.Checked = False Then
+            MSSQLUser.Enabled = True
+            MSSQLPassword.Enabled = True
         End If
     End Sub
 End Class
