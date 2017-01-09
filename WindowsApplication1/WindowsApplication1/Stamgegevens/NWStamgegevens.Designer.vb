@@ -22,8 +22,8 @@ Partial Class NWStamgegevens
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.KnopOpslaan = New System.Windows.Forms.Button()
+        Me.KnopSluiten = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -34,23 +34,23 @@ Partial Class NWStamgegevens
         Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Button1
+        'KnopOpslaan
         '
-        Me.Button1.Location = New System.Drawing.Point(13, 130)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Opslaan"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.KnopOpslaan.Location = New System.Drawing.Point(13, 130)
+        Me.KnopOpslaan.Name = "KnopOpslaan"
+        Me.KnopOpslaan.Size = New System.Drawing.Size(75, 23)
+        Me.KnopOpslaan.TabIndex = 0
+        Me.KnopOpslaan.Text = "Opslaan"
+        Me.KnopOpslaan.UseVisualStyleBackColor = True
         '
-        'Button2
+        'KnopSluiten
         '
-        Me.Button2.Location = New System.Drawing.Point(218, 130)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Sluiten"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.KnopSluiten.Location = New System.Drawing.Point(284, 129)
+        Me.KnopSluiten.Name = "KnopSluiten"
+        Me.KnopSluiten.Size = New System.Drawing.Size(75, 23)
+        Me.KnopSluiten.TabIndex = 1
+        Me.KnopSluiten.Text = "Sluiten"
+        Me.KnopSluiten.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -81,28 +81,28 @@ Partial Class NWStamgegevens
         '
         'Txt1
         '
-        Me.Txt1.Location = New System.Drawing.Point(98, 13)
+        Me.Txt1.Location = New System.Drawing.Point(164, 12)
         Me.Txt1.Name = "Txt1"
         Me.Txt1.Size = New System.Drawing.Size(195, 20)
         Me.Txt1.TabIndex = 5
         '
         'Txt2
         '
-        Me.Txt2.Location = New System.Drawing.Point(98, 40)
+        Me.Txt2.Location = New System.Drawing.Point(164, 39)
         Me.Txt2.Name = "Txt2"
         Me.Txt2.Size = New System.Drawing.Size(195, 20)
         Me.Txt2.TabIndex = 6
         '
         'Txt3
         '
-        Me.Txt3.Location = New System.Drawing.Point(98, 67)
+        Me.Txt3.Location = New System.Drawing.Point(164, 66)
         Me.Txt3.Name = "Txt3"
         Me.Txt3.Size = New System.Drawing.Size(195, 20)
         Me.Txt3.TabIndex = 7
         '
         'Txt4
         '
-        Me.Txt4.Location = New System.Drawing.Point(98, 93)
+        Me.Txt4.Location = New System.Drawing.Point(164, 92)
         Me.Txt4.Name = "Txt4"
         Me.Txt4.Size = New System.Drawing.Size(195, 20)
         Me.Txt4.TabIndex = 9
@@ -120,7 +120,7 @@ Partial Class NWStamgegevens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(305, 165)
+        Me.ClientSize = New System.Drawing.Size(370, 165)
         Me.Controls.Add(Me.Txt4)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Txt3)
@@ -129,8 +129,8 @@ Partial Class NWStamgegevens
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.KnopSluiten)
+        Me.Controls.Add(Me.KnopOpslaan)
         Me.Name = "NWStamgegevens"
         Me.Text = "NWStamgegevens"
         Me.ResumeLayout(False)
@@ -138,8 +138,8 @@ Partial Class NWStamgegevens
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents KnopOpslaan As Button
+    Friend WithEvents KnopSluiten As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label

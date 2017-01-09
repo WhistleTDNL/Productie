@@ -25,7 +25,6 @@ Partial Class Onderhouden
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TxtOndNr = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TxtOndLand = New System.Windows.Forms.TextBox()
         Me.TxtOndPlaats = New System.Windows.Forms.TextBox()
         Me.TxtOndPc = New System.Windows.Forms.TextBox()
         Me.TxtOndAdres = New System.Windows.Forms.TextBox()
@@ -37,14 +36,15 @@ Partial Class Onderhouden
         Me.Label1 = New System.Windows.Forms.Label()
         Me.KnopOpslaan = New System.Windows.Forms.Button()
         Me.KnopSluiten = New System.Windows.Forms.Button()
+        Me.BoxOndLand = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.BoxOndLand)
         Me.GroupBox1.Controls.Add(Me.TxtOndNr)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.TxtOndLand)
         Me.GroupBox1.Controls.Add(Me.TxtOndPlaats)
         Me.GroupBox1.Controls.Add(Me.TxtOndPc)
         Me.GroupBox1.Controls.Add(Me.TxtOndAdres)
@@ -76,13 +76,6 @@ Partial Class Onderhouden
         Me.Label6.Size = New System.Drawing.Size(77, 13)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Relatienummer"
-        '
-        'TxtOndLand
-        '
-        Me.TxtOndLand.Location = New System.Drawing.Point(117, 144)
-        Me.TxtOndLand.Name = "TxtOndLand"
-        Me.TxtOndLand.Size = New System.Drawing.Size(232, 20)
-        Me.TxtOndLand.TabIndex = 11
         '
         'TxtOndPlaats
         '
@@ -175,6 +168,14 @@ Partial Class Onderhouden
         Me.KnopSluiten.Text = "Sluiten"
         Me.KnopSluiten.UseVisualStyleBackColor = True
         '
+        'BoxOndLand
+        '
+        Me.BoxOndLand.FormattingEnabled = True
+        Me.BoxOndLand.Location = New System.Drawing.Point(117, 145)
+        Me.BoxOndLand.Name = "BoxOndLand"
+        Me.BoxOndLand.Size = New System.Drawing.Size(232, 21)
+        Me.BoxOndLand.TabIndex = 14
+        '
         'Onderhouden
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -194,7 +195,6 @@ Partial Class Onderhouden
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TxtOndNr As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TxtOndLand As TextBox
     Friend WithEvents TxtOndPlaats As TextBox
     Friend WithEvents TxtOndPc As TextBox
     Friend WithEvents TxtOndAdres As TextBox
@@ -206,4 +206,5 @@ Partial Class Onderhouden
     Friend WithEvents Label1 As Label
     Friend WithEvents KnopOpslaan As Button
     Friend WithEvents KnopSluiten As Button
+    Friend WithEvents BoxOndLand As ComboBox
 End Class

@@ -26,7 +26,6 @@ Partial Class NwKlant
         Me.KnopNwKlantLeegmaken = New System.Windows.Forms.Button()
         Me.TxtNwKlantNr = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TxtNwKlantLand = New System.Windows.Forms.TextBox()
         Me.TxtNwKlantPlaats = New System.Windows.Forms.TextBox()
         Me.TxtNwKlantPc = New System.Windows.Forms.TextBox()
         Me.TxtNwKlantAdres = New System.Windows.Forms.TextBox()
@@ -38,15 +37,16 @@ Partial Class NwKlant
         Me.Label1 = New System.Windows.Forms.Label()
         Me.KnopNwKlantOpslaan = New System.Windows.Forms.Button()
         Me.KnopNwKlantSluiten = New System.Windows.Forms.Button()
+        Me.BoxNwKlantLand = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.BoxNwKlantLand)
         Me.GroupBox1.Controls.Add(Me.KnopNwKlantLeegmaken)
         Me.GroupBox1.Controls.Add(Me.TxtNwKlantNr)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.TxtNwKlantLand)
         Me.GroupBox1.Controls.Add(Me.TxtNwKlantPlaats)
         Me.GroupBox1.Controls.Add(Me.TxtNwKlantPc)
         Me.GroupBox1.Controls.Add(Me.TxtNwKlantAdres)
@@ -89,13 +89,6 @@ Partial Class NwKlant
         Me.Label6.Size = New System.Drawing.Size(68, 13)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Klantnummer"
-        '
-        'TxtNwKlantLand
-        '
-        Me.TxtNwKlantLand.Location = New System.Drawing.Point(73, 144)
-        Me.TxtNwKlantLand.Name = "TxtNwKlantLand"
-        Me.TxtNwKlantLand.Size = New System.Drawing.Size(232, 20)
-        Me.TxtNwKlantLand.TabIndex = 5
         '
         'TxtNwKlantPlaats
         '
@@ -188,6 +181,14 @@ Partial Class NwKlant
         Me.KnopNwKlantSluiten.Text = "Annuleren"
         Me.KnopNwKlantSluiten.UseVisualStyleBackColor = True
         '
+        'BoxNwKlantLand
+        '
+        Me.BoxNwKlantLand.FormattingEnabled = True
+        Me.BoxNwKlantLand.Location = New System.Drawing.Point(73, 143)
+        Me.BoxNwKlantLand.Name = "BoxNwKlantLand"
+        Me.BoxNwKlantLand.Size = New System.Drawing.Size(232, 21)
+        Me.BoxNwKlantLand.TabIndex = 13
+        '
         'NwKlant
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -205,7 +206,6 @@ Partial Class NwKlant
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TxtNwKlantNr As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TxtNwKlantLand As TextBox
     Friend WithEvents TxtNwKlantPlaats As TextBox
     Friend WithEvents TxtNwKlantPc As TextBox
     Friend WithEvents TxtNwKlantAdres As TextBox
@@ -218,4 +218,5 @@ Partial Class NwKlant
     Friend WithEvents KnopNwKlantOpslaan As Button
     Friend WithEvents KnopNwKlantSluiten As Button
     Friend WithEvents KnopNwKlantLeegmaken As Button
+    Friend WithEvents BoxNwKlantLand As ComboBox
 End Class

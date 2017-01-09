@@ -1,9 +1,9 @@
 ﻿Public Class NWStamgegevens
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub KnopOpslaan_Click(sender As Object, e As EventArgs) Handles KnopOpslaan.Click
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub KnopSluiten_Click(sender As Object, e As EventArgs) Handles KnopSluiten.Click
         Me.Close()
     End Sub
 
@@ -15,7 +15,8 @@
     Private Function GetColumns(QTable As String)
         Dim Labels = {Label1, Label2, Label3, Label4}
         Dim TxtBoxes = {Txt1, Txt2, Txt3, Txt4}
-        Dim strSql As String = "SELECT * FROM " & QTable
+        Dim strSql As String = "Select sep.value From sys.tables st inner Join sys.columns sc on st.object_id = sc.object_id Left Join sys.extended_properties sep on st.object_id = sep.major_id And sc.column_id = sep.minor_id And sep.name = 'MS_Description' where st.name = '" & QTable & "'"
+
         Dim dtb As New DataTable
         Using cnn As New OleDbConnection(My.Settings.DBPATH)
             cnn.Open()
@@ -30,10 +31,10 @@
             Labels(i).Visible = False
         Next
 
-        For i As Integer = 0 To dtb.Columns.Count - 1
+        For i As Integer = 0 To dtb.Rows.Count - 1
             TxtBoxes(i).Visible = True
             Labels(i).Visible = True
-            Labels(i).Text = dtb.Columns(i).ColumnName
+            Labels(i).Text = dtb.Rows(i)(0).ToString()
         Next
     End Function
 

@@ -18,20 +18,20 @@
     End Function
 
     Private Sub KnopZoekKlant_Click(sender As Object, e As EventArgs) Handles KnopZoekKlant.Click
-        myConnection.ConnectionString = DBPath
+        myConnection.ConnectionString = My.Settings.DBPATH
         myConnection.Open()
         If Not TxtKlantenKlantNr.Text = "" Then
             source1.Filter = "klantnr = " & TxtKlantenKlantNr.Text
         Else
-            source1.Filter = "klantnaam like '%" & TxtKlantenKlantNaam.Text & "%' and klantadres like '%" & TxtKlantenKlantAdres.Text & "%' and klantwoon like '%" & TxtKlantenKlantPlaats.Text & "%' and klantlandid like '%" & TxtKlantenKlantLand.Text & "%' and klantpc like '%" & TxtKlantenKlantPc.Text & "%'"
+            source1.Filter = "klantnaam like '%" & TxtKlantenKlantNaam.Text & "%' and klantadres like '%" & TxtKlantenKlantAdres.Text & "%' and klantwoon like '%" & TxtKlantenKlantPlaats.Text & "%' and landoms like '%" & TxtKlantenKlantLand.Text & "%' and klantpc like '%" & TxtKlantenKlantPc.Text & "%'"
         End If
         KlantenDataGridView.Refresh()
         myConnection.Close()
-        Call LoadData("Select * from Klant", "Klant")
+        Call LoadData("Select k.klantnr, k.klantnaam, k.klantadres, k.klantpc, k.klantwoon, l.landoms from klant as k left join landen as l on idlanden = klantlandid", "Klant")
     End Sub
 
     Private Sub NwKlant_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Call LoadData("Select * from Klant", "Klant")
+        Call LoadData("Select k.klantnr, k.klantnaam, k.klantadres, k.klantpc, k.klantwoon, l.landoms from klant as k left join landen as l on idlanden = klantlandid", "Klant")
     End Sub
 
     Private Sub KnopNieuweKlant_Click(sender As Object, e As EventArgs) Handles KnopNieuweKlant.Click
