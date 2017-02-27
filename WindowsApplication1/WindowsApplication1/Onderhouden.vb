@@ -48,6 +48,7 @@
                 BoxOndLand.ValueMember = "idlanden"
                 BoxOndLand.DisplayMember = "landoms"
                 BoxOndLand.DataSource = dt
+                BoxOndLand.Text = tempOndArray(5)
             End Using
         End Using
         Dim Aantal As Integer = tempOndArray.Count
@@ -58,7 +59,6 @@
             TxtOndAdres.Text = tempOndArray(2)
             TxtOndPc.Text = tempOndArray(3)
             TxtOndPlaats.Text = tempOndArray(4)
-            BoxOndLand.SelectedItem = tempOndArray(5)
             For Each item As String In tempOndArray
                 item = ""
             Next

@@ -26,7 +26,6 @@ Partial Class NWLev
         Me.KnopNwLevLeegmaken = New System.Windows.Forms.Button()
         Me.TxtNwLevNr = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TxtNwLevLand = New System.Windows.Forms.TextBox()
         Me.TxtNwLevPlaats = New System.Windows.Forms.TextBox()
         Me.TxtNwLevPc = New System.Windows.Forms.TextBox()
         Me.TxtNwLevAdres = New System.Windows.Forms.TextBox()
@@ -38,15 +37,16 @@ Partial Class NWLev
         Me.Label1 = New System.Windows.Forms.Label()
         Me.KnopNwLevOpslaan = New System.Windows.Forms.Button()
         Me.KnopNwLevSluiten = New System.Windows.Forms.Button()
+        Me.BoxNwLevLand = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.BoxNwLevLand)
         Me.GroupBox1.Controls.Add(Me.KnopNwLevLeegmaken)
         Me.GroupBox1.Controls.Add(Me.TxtNwLevNr)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.TxtNwLevLand)
         Me.GroupBox1.Controls.Add(Me.TxtNwLevPlaats)
         Me.GroupBox1.Controls.Add(Me.TxtNwLevPc)
         Me.GroupBox1.Controls.Add(Me.TxtNwLevAdres)
@@ -89,13 +89,6 @@ Partial Class NWLev
         Me.Label6.Size = New System.Drawing.Size(46, 13)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Nummer"
-        '
-        'TxtNwLevLand
-        '
-        Me.TxtNwLevLand.Location = New System.Drawing.Point(73, 144)
-        Me.TxtNwLevLand.Name = "TxtNwLevLand"
-        Me.TxtNwLevLand.Size = New System.Drawing.Size(232, 20)
-        Me.TxtNwLevLand.TabIndex = 5
         '
         'TxtNwLevPlaats
         '
@@ -188,6 +181,14 @@ Partial Class NWLev
         Me.KnopNwLevSluiten.Text = "Annuleren"
         Me.KnopNwLevSluiten.UseVisualStyleBackColor = True
         '
+        'BoxNwLevLand
+        '
+        Me.BoxNwLevLand.FormattingEnabled = True
+        Me.BoxNwLevLand.Location = New System.Drawing.Point(73, 143)
+        Me.BoxNwLevLand.Name = "BoxNwLevLand"
+        Me.BoxNwLevLand.Size = New System.Drawing.Size(232, 21)
+        Me.BoxNwLevLand.TabIndex = 13
+        '
         'NWLev
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -206,7 +207,6 @@ Partial Class NWLev
     Friend WithEvents KnopNwLevLeegmaken As Button
     Friend WithEvents TxtNwLevNr As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TxtNwLevLand As TextBox
     Friend WithEvents TxtNwLevPlaats As TextBox
     Friend WithEvents TxtNwLevPc As TextBox
     Friend WithEvents TxtNwLevAdres As TextBox
@@ -218,4 +218,5 @@ Partial Class NWLev
     Friend WithEvents Label1 As Label
     Friend WithEvents KnopNwLevOpslaan As Button
     Friend WithEvents KnopNwLevSluiten As Button
+    Friend WithEvents BoxNwLevLand As ComboBox
 End Class

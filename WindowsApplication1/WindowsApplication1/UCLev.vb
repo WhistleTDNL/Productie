@@ -21,14 +21,15 @@
         If Not TxtLevNr.Text = "" Then
             source1.Filter = "levnr = " & TxtLevNr.Text
         Else
-            source1.Filter = "levnaam like '%" & TxtLevNaam.Text & "%' and levadres like '%" & TxtLevAdres.Text & "%' and levwoon like '%" & TxtLevPlaats.Text & "%' and levlandid like '%" & TxtLevLand.Text & "%' and levpc like '%" & TxtLevPc.Text & "%'"
+            source1.Filter = "levnaam like '%" & TxtLevNaam.Text & "%' and levadres like '%" & TxtLevAdres.Text & "%' and levwoon like '%" & TxtLevPlaats.Text & "%' and landoms like '%" & TxtLevLand.Text & "%' and levpc like '%" & TxtLevPc.Text & "%'"
         End If
         LevDataGridView.Refresh()
-        Call LoadData("Select * from Lev", "Lev")
+        Call LoadData("Select l.levnr, l.levnaam, l.levadres, l.levpc, l.levwoon, a.landoms from Lev as l left join landen as a on idlanden = levlandid", "Lev")
+        '"Select k.klantnr, k.klantnaam, k.klantadres, k.klantpc, k.klantwoon, l.landoms from klant as k left join landen as l on idlanden = klantlandid"
     End Sub
 
     Private Sub UcLev_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Call LoadData("Select * from Lev", "Lev")
+        Call LoadData("Select l.levnr, l.levnaam, l.levadres, l.levpc, l.levwoon, a.landoms from Lev as l left join landen as a on idlanden = levlandid", "Lev")
     End Sub
 
     Private Sub KnopNieuweLev_Click(sender As Object, e As EventArgs) Handles KnopNieuweLev.Click
