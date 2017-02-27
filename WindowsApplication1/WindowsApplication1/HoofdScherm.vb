@@ -5,7 +5,7 @@
     End Sub
 
     Private Sub ArtikelToolStripMenuItem1_Click(sender As Object, e As EventArgs)
-        Art.Show()
+        NwArt.Show()
     End Sub
 
     Private Sub DatabaseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DatabaseToolStripMenuItem.Click
@@ -27,6 +27,7 @@
     Dim UCLev As New UCLev
     Dim UCKlanten As New UCKlanten
     Dim UCStamgegevens As New Stamgegevens
+    Dim UCArtikelen As New UCArtikelen
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
         If ListView1.SelectedItems.Count = 1 Then
             Dim LVIndex As Integer = ListView1.SelectedItems(0).Index
@@ -41,7 +42,7 @@
             ElseIf LVIndex = 2 Then
                 SplitContainer1.Panel2.Controls.Clear()
                 UCLev.Dock = DockStyle.Fill
-                SplitContainer1.Panel2.Controls.Add(UCLev)
+                SplitContainer1.Panel2.Controls.Add(UCArtikelen)
             End If
         End If
     End Sub

@@ -75,7 +75,7 @@ Partial Class UCStamgegevens
         '
         'Txt1
         '
-        Me.Txt1.Location = New System.Drawing.Point(89, 3)
+        Me.Txt1.Location = New System.Drawing.Point(123, 3)
         Me.Txt1.Name = "Txt1"
         Me.Txt1.Size = New System.Drawing.Size(156, 20)
         Me.Txt1.TabIndex = 11
@@ -91,7 +91,7 @@ Partial Class UCStamgegevens
         '
         'Txt2
         '
-        Me.Txt2.Location = New System.Drawing.Point(89, 29)
+        Me.Txt2.Location = New System.Drawing.Point(123, 29)
         Me.Txt2.Name = "Txt2"
         Me.Txt2.Size = New System.Drawing.Size(156, 20)
         Me.Txt2.TabIndex = 9
@@ -113,7 +113,7 @@ Partial Class UCStamgegevens
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(251, 6)
+        Me.Label3.Location = New System.Drawing.Point(294, 6)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(34, 13)
         Me.Label3.TabIndex = 17
@@ -121,7 +121,7 @@ Partial Class UCStamgegevens
         '
         'Txt3
         '
-        Me.Txt3.Location = New System.Drawing.Point(314, 3)
+        Me.Txt3.Location = New System.Drawing.Point(441, 3)
         Me.Txt3.Name = "Txt3"
         Me.Txt3.Size = New System.Drawing.Size(156, 20)
         Me.Txt3.TabIndex = 16
@@ -129,7 +129,7 @@ Partial Class UCStamgegevens
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(251, 32)
+        Me.Label4.Location = New System.Drawing.Point(294, 32)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(34, 13)
         Me.Label4.TabIndex = 19
@@ -137,7 +137,7 @@ Partial Class UCStamgegevens
         '
         'Txt4
         '
-        Me.Txt4.Location = New System.Drawing.Point(314, 29)
+        Me.Txt4.Location = New System.Drawing.Point(441, 29)
         Me.Txt4.Name = "Txt4"
         Me.Txt4.Size = New System.Drawing.Size(156, 20)
         Me.Txt4.TabIndex = 18

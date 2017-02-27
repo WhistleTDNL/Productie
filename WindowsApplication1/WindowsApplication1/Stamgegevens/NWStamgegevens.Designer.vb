@@ -45,7 +45,7 @@ Partial Class NWStamgegevens
         '
         'KnopSluiten
         '
-        Me.KnopSluiten.Location = New System.Drawing.Point(284, 129)
+        Me.KnopSluiten.Location = New System.Drawing.Point(355, 130)
         Me.KnopSluiten.Name = "KnopSluiten"
         Me.KnopSluiten.Size = New System.Drawing.Size(75, 23)
         Me.KnopSluiten.TabIndex = 1
@@ -81,28 +81,28 @@ Partial Class NWStamgegevens
         '
         'Txt1
         '
-        Me.Txt1.Location = New System.Drawing.Point(164, 12)
+        Me.Txt1.Location = New System.Drawing.Point(235, 13)
         Me.Txt1.Name = "Txt1"
         Me.Txt1.Size = New System.Drawing.Size(195, 20)
         Me.Txt1.TabIndex = 5
         '
         'Txt2
         '
-        Me.Txt2.Location = New System.Drawing.Point(164, 39)
+        Me.Txt2.Location = New System.Drawing.Point(235, 40)
         Me.Txt2.Name = "Txt2"
         Me.Txt2.Size = New System.Drawing.Size(195, 20)
         Me.Txt2.TabIndex = 6
         '
         'Txt3
         '
-        Me.Txt3.Location = New System.Drawing.Point(164, 66)
+        Me.Txt3.Location = New System.Drawing.Point(235, 67)
         Me.Txt3.Name = "Txt3"
         Me.Txt3.Size = New System.Drawing.Size(195, 20)
         Me.Txt3.TabIndex = 7
         '
         'Txt4
         '
-        Me.Txt4.Location = New System.Drawing.Point(164, 92)
+        Me.Txt4.Location = New System.Drawing.Point(235, 93)
         Me.Txt4.Name = "Txt4"
         Me.Txt4.Size = New System.Drawing.Size(195, 20)
         Me.Txt4.TabIndex = 9
@@ -120,7 +120,7 @@ Partial Class NWStamgegevens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(370, 165)
+        Me.ClientSize = New System.Drawing.Size(443, 165)
         Me.Controls.Add(Me.Txt4)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Txt3)

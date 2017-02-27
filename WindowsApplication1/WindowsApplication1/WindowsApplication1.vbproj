@@ -99,11 +99,17 @@
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Artikelen en grondstoffen onderhoud\NwArt.Designer.vb">
+      <DependentUpon>NwArt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Artikelen en grondstoffen onderhoud\NwArt.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Databaseinstellingen.vb" />
-    <Compile Include="NwKlant.Designer.vb">
+    <Compile Include="Klanten en Leveranciers onderhoud\NwKlant.Designer.vb">
       <DependentUpon>NwKlant.vb</DependentUpon>
     </Compile>
-    <Compile Include="NwKlant.vb">
+    <Compile Include="Klanten en Leveranciers onderhoud\NwKlant.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HoofdScherm.vb">
@@ -125,6 +131,12 @@
     <Compile Include="Stamgegevens\Stamgegevens.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Artikelen en grondstoffen onderhoud\UCArtikelen.Designer.vb">
+      <DependentUpon>UCArtikelen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Artikelen en grondstoffen onderhoud\UCArtikelen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="TempArrays.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -141,34 +153,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Art.Designer.vb">
-      <DependentUpon>Art.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Art.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GrondStof.Designer.vb">
+    <Compile Include="Artikelen en grondstoffen onderhoud\GrondStof.Designer.vb">
       <DependentUpon>GrondStof.vb</DependentUpon>
     </Compile>
-    <Compile Include="GrondStof.vb">
+    <Compile Include="Artikelen en grondstoffen onderhoud\GrondStof.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NWLev.Designer.vb">
+    <Compile Include="Klanten en Leveranciers onderhoud\NWLev.Designer.vb">
       <DependentUpon>NWLev.vb</DependentUpon>
     </Compile>
-    <Compile Include="NWLev.vb">
+    <Compile Include="Klanten en Leveranciers onderhoud\NWLev.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NwOrder.Designer.vb">
+    <Compile Include="Order\NwOrder.Designer.vb">
       <DependentUpon>NwOrder.vb</DependentUpon>
     </Compile>
-    <Compile Include="NwOrder.vb">
+    <Compile Include="Order\NwOrder.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Onderhouden.Designer.vb">
+    <Compile Include="Klanten en Leveranciers onderhoud\Onderhouden.Designer.vb">
       <DependentUpon>Onderhouden.vb</DependentUpon>
     </Compile>
-    <Compile Include="Onderhouden.vb">
+    <Compile Include="Klanten en Leveranciers onderhoud\Onderhouden.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OptiesDatabase.Designer.vb">
@@ -178,16 +184,16 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings.vb" />
-    <Compile Include="UCKlanten.Designer.vb">
+    <Compile Include="Klanten en Leveranciers onderhoud\UCKlanten.Designer.vb">
       <DependentUpon>UCKlanten.vb</DependentUpon>
     </Compile>
-    <Compile Include="UCKlanten.vb">
+    <Compile Include="Klanten en Leveranciers onderhoud\UCKlanten.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCLev.Designer.vb">
+    <Compile Include="Klanten en Leveranciers onderhoud\UCLev.Designer.vb">
       <DependentUpon>UCLev.vb</DependentUpon>
     </Compile>
-    <Compile Include="UCLev.vb">
+    <Compile Include="Klanten en Leveranciers onderhoud\UCLev.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Stamgegevens\UCStamgegevens.Designer.vb">
@@ -201,6 +207,9 @@
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Artikelen en grondstoffen onderhoud\NwArt.resx">
+      <DependentUpon>NwArt.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HoofdScherm.resx">
       <DependentUpon>HoofdScherm.vb</DependentUpon>
     </EmbeddedResource>
@@ -210,16 +219,16 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="NwKlant.resx">
+    <EmbeddedResource Include="Klanten en Leveranciers onderhoud\NwKlant.resx">
       <DependentUpon>NwKlant.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NWLev.resx">
+    <EmbeddedResource Include="Klanten en Leveranciers onderhoud\NWLev.resx">
       <DependentUpon>NWLev.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NwOrder.resx">
+    <EmbeddedResource Include="Order\NwOrder.resx">
       <DependentUpon>NwOrder.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Onderhouden.resx">
+    <EmbeddedResource Include="Klanten en Leveranciers onderhoud\Onderhouden.resx">
       <DependentUpon>Onderhouden.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptiesDatabase.resx">
@@ -231,10 +240,13 @@
     <EmbeddedResource Include="Stamgegevens\Stamgegevens.resx">
       <DependentUpon>Stamgegevens.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCKlanten.resx">
+    <EmbeddedResource Include="Artikelen en grondstoffen onderhoud\UCArtikelen.resx">
+      <DependentUpon>UCArtikelen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klanten en Leveranciers onderhoud\UCKlanten.resx">
       <DependentUpon>UCKlanten.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCLev.resx">
+    <EmbeddedResource Include="Klanten en Leveranciers onderhoud\UCLev.resx">
       <DependentUpon>UCLev.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stamgegevens\UCStamgegevens.resx">

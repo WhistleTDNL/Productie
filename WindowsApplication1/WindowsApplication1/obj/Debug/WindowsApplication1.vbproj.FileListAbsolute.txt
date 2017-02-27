@@ -40,3 +40,5 @@ C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication
 C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.Stamgegevens.resources
 C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.UCStamgegevens.resources
 C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.NWStamgegevens.resources
+C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.UCArtikelen.resources
+C:\Users\Jacco\Documents\GitHub\Productie\WindowsApplication1\WindowsApplication1\obj\Debug\SimProdPlan.NwArt.resources
